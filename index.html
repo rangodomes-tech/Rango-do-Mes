@@ -53,10 +53,10 @@ section{padding:70px 0}
 .nav-cta-hide{display:inline-flex}
 
 /* ---- HERO ---- */
-.hero{background:radial-gradient(120% 90% at 80% 0%,#3a2c1c 0%,var(--dark) 55%);color:#EDE4D6;padding:64px 0 76px;position:relative;overflow:hidden}
+.hero{background:radial-gradient(120% 90% at 84% -8%,#291d11 0%,#14100a 52%);color:#EDE4D6;padding:64px 0 76px;position:relative;overflow:hidden}
 .hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.04) 1px,transparent 0);background-size:22px 22px;pointer-events:none}
 .hero .wrap{position:relative;z-index:1}
-.hero h1{font-size:clamp(38px,8.5vw,76px);color:#fff;margin:16px 0 0}
+.hero h1{font-size:clamp(38px,8.5vw,74px);color:#fff;margin:16px 0 0;line-height:1.06}
 .hero h1 .y{color:var(--gold)}
 .hero-sub{font-size:clamp(18px,2.5vw,22px);line-height:1.55;color:#E0D5C5;margin:20px 0 0;max-width:640px}
 .hero-cta{margin-top:34px;display:flex;flex-direction:column;align-items:flex-start;gap:14px}
@@ -255,9 +255,17 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
 /* ---- gradiente escuro em movimento lento ---- */
 .dark,.final{position:relative;overflow:hidden}
 .dark>.wrap,.final>.wrap{position:relative;z-index:1}
-.hero::before,.dark::before,.final::before{content:"";position:absolute;inset:-25%;z-index:0;pointer-events:none;background:radial-gradient(50% 55% at 28% 30%,rgba(244,162,30,.12),transparent 60%),radial-gradient(48% 52% at 74% 72%,rgba(216,65,47,.09),transparent 62%);background-size:200% 200%,200% 200%;background-repeat:no-repeat;animation:bgDrift 18s ease-in-out infinite}
+.hero::before,.dark::before,.final::before{content:"";position:absolute;inset:-25%;z-index:0;pointer-events:none;background:radial-gradient(50% 55% at 28% 30%,rgba(244,162,30,.06),transparent 60%),radial-gradient(48% 52% at 74% 72%,rgba(216,65,47,.05),transparent 62%);background-size:200% 200%,200% 200%;background-repeat:no-repeat;animation:bgDrift 12s ease-in-out infinite}
 @keyframes bgDrift{0%{background-position:0% 38%,100% 62%}50%{background-position:100% 62%,0% 38%}100%{background-position:0% 38%,100% 62%}}
 @media(prefers-reduced-motion:reduce){.hero::before,.dark::before,.final::before{animation:none}}
+
+.breakdown-band{padding:58px 0}
+.bd-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:28px}
+.bd{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:24px 10px;transition:transform .2s ease,box-shadow .2s ease}
+.bd:hover{transform:translateY(-5px);box-shadow:0 18px 34px rgba(0,0,0,.32)}
+.bd-n{font-family:Anton,sans-serif;font-size:clamp(36px,5.5vw,54px);color:var(--gold);line-height:1}
+.bd-l{font-weight:700;color:#EDE4D6;font-size:clamp(13px,1.6vw,15px);margin-top:8px;line-height:1.2}
+
 </style>
 </head>
 <body>
@@ -280,11 +288,11 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
         <p class="hero-sub">Cinco cardápios práticos por dia, comida de verdade — gostosa, variada e que enche a barriga — com um plano simples, pronto e que cabe no seu bolso. <strong>Sem passar aperto no fim do mês.</strong></p>
         <div class="hero-cta">
           <a href="https://pay.hub.la/ZFxwTnNsliEvdmmJow2h" class="btn btn-wide btn-arrow">Quero começar agora</a>
-          <div class="under-cta">12x de <b>R$9,95</b> &nbsp;•&nbsp; ou R$97,90 à vista &nbsp;•&nbsp; Garantia de 7 dias</div>
+          <div class="under-cta">12x de <b>R$9,95</b> &nbsp;•&nbsp; ou R$97,90 à vista no Pix &nbsp;•&nbsp; Garantia de 7 dias</div>
         </div>
         <div class="trust-strip">
-          <div><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#F4A21E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>+140 receitas gostosas e baratas</div>
-          <div><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#F4A21E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>30 dias planejados</div>
+          <div><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#F4A21E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>+140 receitas</div>
+          <div><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#F4A21E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Mês inteiro planejado</div>
           <div><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#F4A21E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Seu para sempre</div>
         </div>
       </div>
@@ -292,6 +300,22 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
     </div>
   </div>
 </header>
+
+<section class="dark breakdown-band">
+  <div class="wrap narrow" style="text-align:center">
+    <span class="eyebrow" style="color:var(--gold)">São 140 receitas no total</span>
+    <h2 style="font-size:clamp(28px,6vw,44px);color:#fff;margin-top:14px">Todas diferentes,<br>do primeiro ao último dia</h2>
+    <div class="h-band" style="margin:18px auto 0"></div>
+    <p style="color:#E0D5C5;max-width:620px;margin:18px auto 0;font-size:clamp(16px,2.4vw,19px)">Um cardápio completo para cada refeição do dia — sem repetir o prato no mês inteiro:</p>
+    <div class="bd-grid">
+      <div class="bd"><div class="bd-n">28</div><div class="bd-l">cafés da manhã</div></div>
+      <div class="bd"><div class="bd-n">28</div><div class="bd-l">lanches da manhã</div></div>
+      <div class="bd"><div class="bd-n">28</div><div class="bd-l">almoços</div></div>
+      <div class="bd"><div class="bd-n">28</div><div class="bd-l">lanches da tarde</div></div>
+      <div class="bd"><div class="bd-n">28</div><div class="bd-l">jantares</div></div>
+    </div>
+  </div>
+</section>
 
 <!-- ===================== PROBLEMA ===================== -->
 <section>
@@ -304,7 +328,7 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
       <div class="pain"><span class="x"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="#D8412F" stroke-width="2.4" stroke-linecap="round"/></svg></span><p>O salário entra e, antes da metade do mês, <b>a comida já está acabando</b> na despensa.</p></div>
       <div class="pain"><span class="x"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="#D8412F" stroke-width="2.4" stroke-linecap="round"/></svg></span><p>Você abre a geladeira, olha, fecha e <b>não sabe o que fazer pra comer</b> — de novo.</p></div>
       <div class="pain"><span class="x"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="#D8412F" stroke-width="2.4" stroke-linecap="round"/></svg></span><p>É <b>arroz com ovo todo dia</b>, sempre a mesma coisa, e a família já cansou.</p></div>
-      <div class="pain"><span class="x"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="#D8412F" stroke-width="2.4" stroke-linecap="round"/></svg></span><p>No mercado, você enche o carrinho, <b>gasta um monte</b> e mesmo assim a comida não rende.</p></div>
+      <div class="pain"><span class="x"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="#D8412F" stroke-width="2.4" stroke-linecap="round"/></svg></span><p>No mercado, você enche o carrinho, <b>gasta um monte</b> e mesmo assim a comida não rende.</p></div><div class="pain"><span class="x"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="#D8412F" stroke-width="2.4" stroke-linecap="round"/></svg></span><p>No corredor do mercado, você faz conta de cabeça (ou na calculadora), <b>com medo do total no caixa</b>.</p></div>
       <div class="pain"><span class="x"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="#D8412F" stroke-width="2.4" stroke-linecap="round"/></svg></span><p>Você passa horas na cozinha cansado(a), sem planejamento, e ainda <b>joga comida fora</b>.</p></div>
     </div>
     <div class="empathy">A gente sabe como é — e <b>não é culpa sua</b>. Ninguém te ensinou a planejar a comida do mês. Faltava um plano simples, pronto, feito para a vida real. <b>Agora ele existe.</b></div>
@@ -366,7 +390,7 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
       <span class="eyebrow"><svg class="chef" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M10 19h12v6a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2v-6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 19c-3.4 0-5.7-2.2-5.7-5.3 0-2.6 1.9-4.7 4.5-5C11.1 6.5 13.3 5 16 5s4.9 1.5 5.2 3.7c2.6.3 4.5 2.4 4.5 5 0 3.1-2.3 5.3-5.7 5.3H12Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12.5 23h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>O que você recebe</span>
       <h2 style="font-size:clamp(28px,6vw,44px);margin-top:14px">Um mês inteiro,<br>tudo pronto</h2>
       <div class="h-band"></div>
-      <p class="lead">São <strong>5 módulos</strong> que cobrem os 30 dias do mês, do começo ao fim. Tudo no seu celular, para acessar quando quiser.</p>
+      <p class="lead">São <strong>5 módulos</strong> que cobrem o mês inteiro, do começo ao fim. Tudo no seu celular, para acessar quando quiser.</p>
     </div>
 
 <div class="covers">
@@ -391,29 +415,29 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
       <div class="mod">
         <div class="mn">1</div>
         <div><div class="tagn">Semana 1 · O Essencial</div><h3>7 dias completos</h3>
-        <p>A semana mais simples para criar o hábito. Abre com a lista de compras e o plano, e traz os 7 dias com cada refeição passo a passo.</p></div>
+        <p>A semana mais simples, para criar o hábito. Receitas básicas, baratas e que todo mundo gosta — o ponto de partida perfeito, com cada dia diferente do outro.</p></div>
       </div>
       <div class="mod">
         <div class="mn">2</div>
         <div><div class="tagn">Semana 2 · Variando a Mesa</div><h3>7 dias completos</h3>
-        <p>Mais sabor pelo mesmo bolso, com outras proteínas baratas. Nenhum prato repete a semana anterior.</p></div>
+        <p>Mais sabor pelo mesmo bolso, com proteínas variadas e baratas. Nenhum prato repete a semana anterior — e ainda tem sobremesa.</p></div>
       </div>
       <div class="mod">
         <div class="mn">3</div>
         <div><div class="tagn">Semana 3 · Comida de Casa</div><h3>7 dias completos</h3>
-        <p>Pratos que rendem e confortam, no capricho caseiro. Tudo novo de novo, com lista de compras e produção prontas.</p></div>
+        <p>Pratos que rendem e confortam, no capricho caseiro. Tudo novo de novo, com a lista de compras e a produção já prontas.</p></div>
       </div>
       <div class="mod">
         <div class="mn">4</div>
         <div><div class="tagn">Semana 4 · Fechando o Mês</div><h3>7 dias completos</h3>
-        <p>A reta final com pratos que parecem de restaurante mas cabem no orçamento. Fecha os 30 dias sem repetir nada.</p></div>
+        <p>A reta final, com pratos que parecem de restaurante mas cabem no bolso. Fecha o mês fortalecendo o hábito, sem repetir nada.</p></div>
       </div>
     </div>
 
     <div class="included">
       <h4>Tudo isso está incluído</h4>
       <ul class="check">
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Cardápio dos 30 dias</b>, dia por dia, com 5 refeições em cada um.</div></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Cardápio do mês inteiro</b>, dia por dia, com 5 refeições em cada um.</div></li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Lista de compras de cada semana</b>, com a quantidade certa para 1, 2, 3 ou 4 pessoas.</div></li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Receita de cada refeição</b> com ingredientes na medida e passo a passo bem explicado.</div></li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Plano de produção</b> que mostra o que cozinhar e quando, para gastar pouco tempo na cozinha.</div></li>
@@ -451,7 +475,7 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
     </div>
     <div class="bens">
       <div class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="#E0820B" stroke-width="1.9"/><path d="M12 7.5v9M9.5 14c0 1.2 1.1 2 2.5 2s2.5-.7 2.5-1.9c0-2.6-4.8-1.4-4.8-3.9 0-1.1 1-1.8 2.3-1.8s2.3.7 2.3 1.7" stroke="#E0820B" stroke-width="1.7" stroke-linecap="round"/></svg></div><h3>Você economiza de verdade</h3><p>Comprando com a lista certa e aproveitando tudo, a economia aparece já na primeira ida ao mercado — muito mais que o valor do plano.</p></div>
-      <div class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h10" stroke="#E0820B" stroke-width="1.9" stroke-linecap="round"/></svg></div><h3>Nunca mais enjoa</h3><p>São 30 dias sem repetir o prato. A família come variado e com gosto, e você nunca mais fica sem ideia do que fazer.</p></div>
+      <div class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h10" stroke="#E0820B" stroke-width="1.9" stroke-linecap="round"/></svg></div><h3>Nunca mais enjoa</h3><p>São 4 semanas sem repetir o prato. A família come variado e com gosto, e você nunca mais fica sem ideia do que fazer.</p></div>
       <div class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-7-10a4.2 4.2 0 0 1 7-3 4.2 4.2 0 0 1 7 3c0 5.5-7 10-7 10Z" stroke="#E0820B" stroke-width="1.9" stroke-linejoin="round"/></svg></div><h3>Comida de verdade</h3><p>Nada de ultraprocessado caro. Arroz, feijão, ovo, frango, fruta e verdura — alimento que sustenta e faz bem para a família.</p></div>
       <div class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="#E0820B" stroke-width="1.9"/><path d="M12 7.5V12l3 2" stroke="#E0820B" stroke-width="1.9" stroke-linecap="round"/></svg></div><h3>Menos tempo no fogão</h3><p>Cozinhando em duas sessões e montando o resto, você ganha horas da sua semana de volta para o que importa.</p></div>
     </div>
@@ -504,17 +528,17 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
       <div class="quote">
         <div class="stars">★★★★★</div>
         <p>"Eu não sabia mais o que fazer pra render a comida. Com o plano, paro de gastar à toa e ainda sobra. Minha filha adora não comer sempre a mesma coisa."</p>
-        <div class="who">Maria S.<span class="where"> </span></div>
+        <div class="who">Maria S.<span class="where"> · exemplo a substituir</span></div>
       </div>
       <div class="quote">
         <div class="stars">★★★★★</div>
         <p>"Moro sozinho e achava que ia desperdiçar. As medidas pra uma pessoa salvaram. Cozinho dois dias e como a semana toda."</p>
-        <div class="who">João P.<span class="where"> </span></div>
+        <div class="who">João P.<span class="where"> · exemplo a substituir</span></div>
       </div>
       <div class="quote">
         <div class="stars">★★★★★</div>
         <p>"A lista de compras é o que mais me ajudou. Vou ao mercado uma vez, gasto certinho e a comida dura. Recomendo demais."</p>
-        <div class="who">Dona Cleusa.<span class="where"> </span></div>
+        <div class="who">Dona Cleusa<span class="where"> · exemplo a substituir</span></div>
       </div>
     </div>
   </div>
@@ -535,7 +559,7 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
         <div class="value-was">Tudo isso valeria mais de <s>R$297</s></div>
         <div class="price-now"><span class="cifra">R$</span>97<span class="cents">,90</span></div>
         <div class="parc">ou 12x de R$9,95</div>
-        <div class="avista">à vista ou cartão — pagamento único, sem mensalidade</div>
+        <div class="avista">à vista no Pix ou cartão — pagamento único, sem mensalidade</div>
         <!-- >>> TROQUE o href "#" abaixo pelo link do seu checkout (Hotmart, Kiwify, etc.) <<< -->
         <a href="https://pay.hub.la/ZFxwTnNsliEvdmmJow2h" class="btn btn-wide btn-arrow">Quero o Rango do Mês</a>
         <div class="pay-icons">
@@ -572,7 +596,7 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
     <div class="h-band" style="margin-left:auto;margin-right:auto"></div>
     <div class="included" style="text-align:left">
       <ul class="check">
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div>Guia Geral + <b>4 semanas completas</b> (30 dias planejados)</div></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div>Guia Geral + <b>4 semanas completas</b> (o mês inteiro)</div></li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>140 refeições</b> com receita e passo a passo, sem repetir</div></li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>4 listas de compras</b> para 1, 2, 3 ou 4 pessoas</div></li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Acesso para sempre</b> no celular + <b>garantia de 7 dias</b></div></li>
@@ -598,7 +622,7 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
       <details><summary>Funciona se eu moro sozinho(a)?</summary><div class="ans">Sim! Todas as listas de compras vêm com a quantidade certa para 1, 2, 3 ou 4 pessoas. Você escolhe a sua coluna e segue, sem desperdício.</div></details>
       <details><summary>É um livro impresso? Como recebo?</summary><div class="ans">É digital. Assim que o pagamento é confirmado, você recebe o acesso na hora, no seu e-mail. Abre no celular, no computador ou pode imprimir se preferir.</div></details>
       <details><summary>Por quanto tempo tenho acesso?</summary><div class="ans">Para sempre. É uma compra única, sem mensalidade. O material fica seu e você usa o mês que quiser, quantas vezes quiser.</div></details>
-      <details><summary>Os preços batem com a minha cidade?</summary><div class="ans">Eles mudam de cidade para cidade, mas o método de economizar — comprar certo, cozinhar em lote e aproveitar tudo — funciona em qualquer lugar do Brasil.</div></details>
+      <details><summary>Os preços batem com a minha cidade?</summary><div class="ans">Os valores são uma referência (de Campo Grande/MS) para você ter uma ideia. Eles mudam de cidade para cidade, mas o método de economizar — comprar certo, cozinhar em lote e aproveitar tudo — funciona em qualquer lugar do Brasil.</div></details>
       <details><summary>E se eu não gostar?</summary><div class="ans">Você tem 7 dias de garantia. Se achar que não é para você, pede o reembolso e devolvemos todo o seu dinheiro. Sem risco nenhum.</div></details>
       <details><summary>A comida é saudável?</summary><div class="ans">Sim. São refeições com comida de verdade — arroz, feijão, ovo, frango, peixe, fruta e verdura — balanceadas e variadas, sem depender de ultraprocessado caro.</div></details>
     </div>
