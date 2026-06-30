@@ -181,6 +181,8 @@ section{padding:70px 0}
 .offer-inner h3{font-family:'Barlow';font-weight:800;font-size:18px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink);margin-bottom:8px}
 .value-was{font-family:'Barlow';font-weight:700;font-size:16px;color:var(--ink-soft);margin-bottom:4px}
 .value-was s{color:var(--tomato)}
+.only-today{display:inline-flex;align-items:center;gap:6px;background:var(--gold);color:#241C14;font-family:'Barlow';font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:6px 13px;border-radius:999px;margin:9px 0 2px;box-shadow:0 6px 16px rgba(244,162,30,.4)}
+.only-today svg{width:15px;height:15px;flex:none}
 .price-now{font-family:'Anton';font-size:clamp(54px,15vw,76px);color:var(--ink);line-height:.95;margin:6px 0}
 .price-now .cents{font-size:.5em;vertical-align:super}
 .price-now .cifra{font-size:.42em;vertical-align:super;color:var(--gold2)}
@@ -354,6 +356,20 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
 @media(min-width:640px){.dish{flex-basis:calc(33.333% - 12px);max-width:calc(33.333% - 12px)}}
 @media(min-width:1000px){.dish{flex-basis:calc(25% - 14px);max-width:calc(25% - 14px)}}
 .dish-note{text-align:center;font-family:'Barlow';font-weight:700;color:var(--ink-soft);font-size:14px;margin-top:24px}
+
+/* ---- âncora de preço: comparação com alternativas ---- */
+.anchor-cmp{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:640px;margin:24px auto 0}
+.anchor-cmp .ac{flex:1 1 172px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);border-radius:12px;padding:12px 14px;text-align:left}
+.anchor-cmp .ac .lab{display:block;font-family:'Barlow';font-weight:600;font-size:12.5px;color:#C9BCA9;line-height:1.25;margin-bottom:3px}
+.anchor-cmp .ac .val{font-family:'Barlow';font-weight:800;font-size:18px;color:#E7D9C4}
+.anchor-cmp-vs{display:block;text-align:center;max-width:600px;margin:14px auto 0;font-family:'Barlow';font-weight:700;font-size:15px;color:#F3E7D4;line-height:1.45}
+.anchor-cmp-vs b{color:var(--gold);font-weight:800}
+
+/* ---- bloco de urgência (custo de esperar) ---- */
+.urg{display:flex;align-items:flex-start;gap:13px;max-width:600px;margin:24px auto 0;text-align:left;background:rgba(244,162,30,.10);border:1px solid rgba(244,162,30,.34);border-radius:14px;padding:15px 17px}
+.urg svg{width:24px;height:24px;flex:none;margin-top:1px}
+.urg p{margin:0;font-family:'Barlow';font-weight:600;font-size:14.5px;color:#EFE3D0;line-height:1.5}
+.urg b{color:#fff;font-weight:800}
 
 </style>
 </head>
@@ -696,13 +712,27 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
     <span class="eyebrow kick-center">A oferta</span>
     <h2 style="font-size:clamp(30px,7vw,50px)">Quanto custa<br>comer bem o mês todo?</h2>
     <div class="h-band" style="margin-left:auto;margin-right:auto"></div>
-    <p class="lead" style="color:#DDD1C0;max-width:620px;margin:0 auto 6px">Uma única consulta com nutricionista passa de <strong>R$200</strong> — e nem te dá o cardápio do mês pronto. Uma semana de marmita entregue custa mais que <strong>R$200</strong>.</p>
+    <p class="lead" style="color:#DDD1C0;max-width:620px;margin:0 auto 6px">Uma única consulta com nutricionista passa de <strong>R$400</strong> — e nem te dá o cardápio do mês pronto. Uma semana de marmita entregue custa mais que <strong>R$600</strong>.</p>
     <p class="lead" style="color:#DDD1C0;max-width:620px;margin:0 auto">O Rango do Mês te entrega o <strong>cardápio do mês inteiro resolvido</strong> por muito menos — e você usa para sempre.</p>
+
+    <div class="anchor-cmp">
+      <div class="ac"><span class="lab">Consulta com nutricionista</span><span class="val">R$400</span></div>
+      <div class="ac"><span class="lab">1 semana de marmita entregue</span><span class="val">R$600</span></div>
+      <div class="ac"><span class="lab">Delivery no mês todo</span><span class="val">R$2.000</span></div>
+    </div>
+    <span class="anchor-cmp-vs">O Rango do Mês resolve <b>o mês inteiro</b> — café, almoço, janta e lanches — por <b>R$97,90</b>. Uma vez. Pra sempre.</span>
+
+    <!-- Urgência honesta (custo de esperar). Se você tiver um prazo/preço de lançamento REAL, posso trocar por um contador. -->
+    <div class="urg">
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#F4A21E" stroke-width="1.9"/><path d="M12 7.5V12l3 2" stroke="#F4A21E" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <p><b>Quanto antes você começa, antes para de perder dinheiro.</b> Todo mês que começa sem um plano escorre pelo ralo — delivery na correria, compra por impulso e comida que estraga. Comece hoje e já deixe o próximo mês organizado.</p>
+    </div>
 
     <div class="offer-box">
       <div class="offer-inner">
         <h3>Acesso completo ao Rango do Mês</h3>
         <div class="value-was">Tudo isso valeria mais de <s>R$297</s></div>
+        <div class="only-today"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#241C14" stroke-width="2"/><path d="M12 7.5V12l3 2" stroke="#241C14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Apenas hoje</div>
         <div class="price-now"><span class="cifra">R$</span>97<span class="cents">,90</span></div>
         <div class="parc">ou 12x de R$9,95</div>
         <div class="avista">à vista no Pix ou cartão — pagamento único, sem mensalidade</div>
@@ -715,7 +745,7 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
         </div>
       </div>
     </div>
-    <p class="offer-note">Compra 100% segura • Acesso imediato após o pagamento • Você economiza o valor já na primeira compra do mês</p>
+    <p class="offer-note">Compra 100% segura • Acesso imediato • 7 dias de garantia ou seu dinheiro de volta • Você economiza já na primeira compra do mês</p>
   </div>
 </section>
 
@@ -813,7 +843,7 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
   try{
     if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
     if(!('IntersectionObserver' in window))return;
-    var sel='.step,.mod,.ben,.aud-card,.quote,.peek figure,.covers figure,.shot,.dish,.included,.offer-box,.guar,.stat,.pain';
+    var sel='.step,.mod,.ben,.aud-card,.quote,.peek figure,.covers figure,.shot,.dish,.anchor-cmp,.urg,.included,.offer-box,.guar,.stat,.pain';
     var els=[].slice.call(document.querySelectorAll(sel));
     els.forEach(function(e){e.classList.add('rv');});
     var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('rv-in');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -7% 0px'});
