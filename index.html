@@ -91,7 +91,7 @@ section{padding:70px 0}
 .hero{background:radial-gradient(120% 90% at 84% -8%,#291d11 0%,#14100a 52%);color:#EDE4D6;padding:64px 0 76px;position:relative;overflow:hidden}
 .hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.04) 1px,transparent 0);background-size:22px 22px;pointer-events:none}
 .hero .wrap{position:relative;z-index:1}
-.hero h1{font-size:clamp(38px,8.5vw,74px);color:#fff;margin:16px 0 0;line-height:1.06}
+.hero h1{font-size:clamp(36px,7.4vw,62px);color:#fff;margin:14px 0 0;line-height:1.05}
 .hero h1 .y{color:var(--gold)}
 .hero-sub{font-size:clamp(18px,2.5vw,22px);line-height:1.55;color:#E0D5C5;margin:20px 0 0;max-width:640px}
 .hero-cta{margin-top:34px;display:flex;flex-direction:column;align-items:flex-start;gap:14px}
@@ -245,8 +245,8 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
 .hero-grid{display:grid;gap:22px;align-items:center}
 .hero-head{display:flex;flex-direction:column}
 @media(min-width:920px){
-  .hero-grid{grid-template-columns:1.02fr .98fr;column-gap:46px;row-gap:20px;
-    grid-template-areas:"head art" "body art";align-items:start}
+  .hero-grid{grid-template-columns:1.12fr .88fr;column-gap:40px;row-gap:16px;
+    grid-template-areas:"head art" "body art";align-items:center}
   .hero-head{grid-area:head;align-self:end}
   .hero-body{grid-area:body;align-self:start}
   .hero-art{grid-area:art;align-self:center}
@@ -259,8 +259,8 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
   font-size:12.5px;letter-spacing:.02em;padding:9px 13px;border-radius:11px;
   box-shadow:0 10px 24px rgba(0,0,0,.28)}
 .hero-badge svg{width:15px;height:15px;flex:none}
-@media(min-width:920px){.hero-art img{max-width:none}}
-@media(max-width:919px){.hero-art{margin:2px 0}.hero-art img{max-width:520px}}
+@media(min-width:920px){.hero-art img{max-width:440px;margin-left:auto;margin-right:0}}
+@media(max-width:919px){.hero{padding:40px 0 58px}.hero-grid{gap:10px}.hero-art{margin:0 auto}.hero-art img{max-width:400px}}
 .covers{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:16px;margin:8px 0 34px}
 .covers figure{margin:0}
 .covers img{width:100%;border-radius:11px;box-shadow:0 14px 28px rgba(36,28,20,.24);border:1px solid rgba(0,0,0,.06)}
