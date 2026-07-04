@@ -63,9 +63,9 @@ strong{font-weight:900;color:var(--ink)}
 .dark strong{color:#fff}
 
 /* ---- buttons ---- */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:'Barlow';font-weight:800;font-size:19px;letter-spacing:.02em;text-transform:uppercase;background:var(--gold);color:var(--ink);padding:19px 34px;border-radius:14px;text-decoration:none;box-shadow:0 6px 0 var(--gold2),0 14px 26px rgba(224,130,11,.34);transition:transform .12s ease,box-shadow .12s ease;border:none;cursor:pointer;text-align:center;line-height:1.15}
-.btn:hover{transform:translateY(-2px);box-shadow:0 8px 0 var(--gold2),0 18px 30px rgba(224,130,11,.4)}
-.btn:active{transform:translateY(3px);box-shadow:0 3px 0 var(--gold2),0 8px 16px rgba(224,130,11,.3)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:'Barlow';font-weight:800;font-size:19px;letter-spacing:.02em;text-transform:uppercase;background:linear-gradient(135deg,#4BCB5D 0%,#219640 50%,#177E31 100%);color:#fff;padding:19px 34px;border-radius:14px;text-decoration:none;box-shadow:0 6px 0 #116326,0 14px 26px rgba(28,130,50,.4);transition:transform .12s ease,box-shadow .12s ease;border:none;cursor:pointer;text-align:center;line-height:1.15}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 0 #116326,0 18px 32px rgba(28,130,50,.48)}
+.btn:active{transform:translateY(3px);box-shadow:0 3px 0 #116326,0 8px 16px rgba(28,130,50,.34)}
 .btn .sub{display:block;font-weight:600;font-size:12px;letter-spacing:.1em;opacity:.78}
 .btn-wide{width:100%;max-width:460px}
 .btn-arrow::after{content:"›";font-size:26px;line-height:0}
@@ -84,7 +84,7 @@ section{padding:70px 0}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
 .brand{font-family:'Anton';font-size:21px;color:#fff;letter-spacing:.02em;text-transform:uppercase}
 .brand small{display:block;font-family:'Barlow';font-weight:700;font-size:8.5px;letter-spacing:.18em;color:var(--gold);margin-top:-2px}
-.nav .btn{padding:11px 20px;font-size:14px;box-shadow:0 4px 0 var(--gold2)}
+.nav .btn{padding:11px 20px;font-size:14px;box-shadow:0 4px 0 #116326}
 .nav-cta-hide{display:inline-flex}
 
 /* ---- HERO ---- */
@@ -229,11 +229,11 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
 .stickybar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(28,23,16,.98);backdrop-filter:blur(6px);border-top:2px solid var(--gold);padding:10px 14px;display:none;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 -8px 24px rgba(0,0,0,.35)}
 .stickybar .sp{font-family:'Barlow';font-weight:800;color:#fff;font-size:13px;line-height:1.2}
 .stickybar .sp b{font-family:'Anton';font-weight:400;font-size:21px;color:var(--gold);display:block}
-.stickybar .btn{padding:14px 20px;font-size:15px;box-shadow:0 4px 0 var(--gold2)}
+.stickybar .btn{padding:14px 20px;font-size:15px;box-shadow:0 4px 0 #116326}
 @media(max-width:720px){
   .stickybar{display:flex}
   body{padding-bottom:80px}
-  .nav-cta-hide{display:none}
+  .nav-cta-hide{display:inline-flex}
   section{padding:54px 0}
   .empathy,.hero-cta{align-items:stretch}
   .btn{width:100%}
@@ -260,7 +260,7 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
   box-shadow:0 10px 24px rgba(0,0,0,.28)}
 .hero-badge svg{width:15px;height:15px;flex:none}
 @media(min-width:920px){.hero-art img{max-width:440px;margin-left:auto;margin-right:0}}
-@media(max-width:919px){.hero{padding:40px 0 58px}.hero-grid{gap:10px}.hero-art{margin:0 auto}.hero-art img{max-width:400px}}
+@media(max-width:919px){.hero{padding:40px 0 56px}.hero-grid{gap:8px}.hero-art{margin:0 auto}.hero .hero-art.mock img{max-width:440px;aspect-ratio:7/5;object-fit:cover;object-position:50% 47%}}
 .covers{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:16px;margin:8px 0 34px}
 .covers figure{margin:0}
 .covers img{width:100%;border-radius:11px;box-shadow:0 14px 28px rgba(36,28,20,.24);border:1px solid rgba(0,0,0,.06)}
@@ -295,7 +295,7 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
 .btn{position:relative;overflow:hidden}
 .btn::before{content:"";position:absolute;top:0;left:-140%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-18deg);transition:left .6s ease;pointer-events:none}
 .btn:hover::before{left:160%}
-@keyframes ctaPulse{0%,100%{box-shadow:0 6px 0 var(--gold2),0 14px 26px rgba(224,130,11,.30)}50%{box-shadow:0 6px 0 var(--gold2),0 16px 40px rgba(244,162,30,.58)}}
+@keyframes ctaPulse{0%,100%{box-shadow:0 6px 0 #116326,0 14px 26px rgba(28,130,50,.32)}50%{box-shadow:0 6px 0 #116326,0 16px 40px rgba(60,190,90,.6)}}
 .btn-wide{animation:ctaPulse 3s ease-in-out infinite}
 .btn-wide:hover{animation:none}
 /* reveal ao rolar */
@@ -910,7 +910,7 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
         <div class="price-now"><span class="cifra">R$</span>129<span class="cents">,90</span></div>
         <div class="parc">ou 12x de R$13,20 no cartão</div>
         <div class="avista">à vista no Pix — pagamento único, sem mensalidade</div>
-        <a href="https://pay.hub.la/ZFxwTnNsliEvdmmJow2h" class="btn btn-wide btn-arrow">Quero começar agora</a>
+        <a href="https://pay.hub.la/ZFxwTnNsliEvdmmJow2h" class="btn btn-wide btn-arrow">Garantir oferta agora</a>
         <div class="pay-icons">
           <span><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2" stroke="#6B5A49" stroke-width="1.8"/><path d="M3 10h18" stroke="#6B5A49" stroke-width="1.8"/></svg>Cartão em 12x</span>
           <span><svg viewBox="0 0 24 24" fill="none"><path d="M12 3 4 7v6c0 4.5 3.4 7.3 8 8 4.6-.7 8-3.5 8-8V7l-8-4Z" stroke="#6B5A49" stroke-width="1.8" stroke-linejoin="round"/></svg>Pix</span>
@@ -1006,12 +1006,6 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
     </div>
   </div>
 </footer>
-
-<!-- ===================== BARRA FIXA (CELULAR) ===================== -->
-<div class="stickybar">
-  <div class="sp">Plano + 10 coleções<b>Comece hoje</b></div>
-  <a href="#oferta" class="btn">Quero acessar</a>
-</div>
 
 <script>document.getElementById('ano').textContent=new Date().getFullYear();</script>
 <script>
