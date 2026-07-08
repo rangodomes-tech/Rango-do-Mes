@@ -440,7 +440,7 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
 .receipt .ri b{color:var(--ink);font-weight:800;white-space:nowrap}
 .receipt .rt{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding-top:17px;margin-top:2px}
 .receipt .rt .lab{font-family:'Barlow';font-weight:800;font-size:13.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink)}
-.receipt .rt .val{font-family:'Anton';font-size:34px;color:var(--leaf);line-height:1}
+.receipt .rt .val{font-family:'Anton';font-size:26px;color:var(--ink-soft);line-height:1;text-decoration:line-through;opacity:.7}
 .perbreak{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:580px;margin:24px auto 0}
 .perbreak .pb{flex:1 1 150px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);border-radius:14px;padding:16px 12px;text-align:center}
 .perbreak .pb .v{font-family:'Anton';font-size:clamp(26px,5vw,34px);color:var(--gold);line-height:1}
@@ -881,29 +881,6 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
     <div class="h-band" style="margin-left:auto;margin-right:auto"></div>
     <p class="lead" style="color:#DDD1C0;max-width:640px;margin:0 auto">Nunca mais o peso das seis da tarde. O sorriso na sobremesa. O elogio da visita. O domingo que reúne todo mundo. Coisas assim não têm preço — mas o material que torna tudo possível tem, e é <strong>bem menos do que você imagina</strong>.</p>
 
-    <div class="receipt">
-      <h3>Tudo o que você leva hoje</h3>
-      <div class="ri"><span>Plano do Mês — 140 receitas + Guia Geral + 4 listas de compras</span><b>R$97</b></div>
-      <div class="ri bo"><span><i class="q">30</i> receitas de Air Fryer</span><b>R$27</b></div>
-      <div class="ri bo"><span><i class="q">30</i> receitas de Forno</span><b>R$27</b></div>
-      <div class="ri bo"><span><i class="q">30</i> receitas de Frigideira</span><b>R$27</b></div>
-      <div class="ri bo"><span><i class="q">30</i> receitas de Saladas</span><b>R$27</b></div>
-      <div class="ri bo"><span><i class="q">30</i> receitas de Lanches</span><b>R$27</b></div>
-      <div class="ri bo"><span><i class="q">30</i> receitas de Molhos</span><b>R$27</b></div>
-      <div class="ri bo"><span><i class="q">30</i> receitas de Churrasco</span><b>R$27</b></div>
-      <div class="ri bo"><span><i class="q">30</i> receitas de Sobremesas</span><b>R$27</b></div>
-      <div class="ri bo"><span><i class="q">30</i> receitas de Sucos</span><b>R$27</b></div>
-      <div class="ri bo"><span><i class="q">30</i> receitas de Drinks</span><b>R$27</b></div>
-      <div class="ri"><span>Suporte, impressão liberada e acesso para sempre</span><b>incluído</b></div>
-      <div class="rt"><span class="lab">Valor real de tudo</span><span class="val">R$367</span></div>
-    </div>
-
-    <div class="perbreak">
-      <div class="pb"><div class="v">R$0,29</div><div class="l">por receita</div></div>
-      <div class="pb"><div class="v">440</div><div class="l">receitas no total</div></div>
-      <div class="pb"><div class="v">Pra sempre</div><div class="l">sem mensalidade</div></div>
-    </div>
-
     <div class="offer-box">
       <div class="offer-inner">
         <h3>Plano do Mês + 10 coleções</h3>
@@ -920,6 +897,30 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
         </div>
       </div>
     </div>
+
+    <div class="perbreak">
+      <div class="pb"><div class="v">R$0,29</div><div class="l">por receita</div></div>
+      <div class="pb"><div class="v">440</div><div class="l">receitas no total</div></div>
+      <div class="pb"><div class="v">Pra sempre</div><div class="l">sem mensalidade</div></div>
+    </div>
+
+    <div class="receipt">
+      <h3>Tudo o que você leva hoje</h3>
+      <div class="ri"><span>Plano do Mês — 140 receitas + Guia Geral + 4 listas de compras</span><b>R$97</b></div>
+      <div class="ri bo"><span><i class="q">30</i> receitas de Air Fryer</span><b>R$27</b></div>
+      <div class="ri bo"><span><i class="q">30</i> receitas de Forno</span><b>R$27</b></div>
+      <div class="ri bo"><span><i class="q">30</i> receitas de Frigideira</span><b>R$27</b></div>
+      <div class="ri bo"><span><i class="q">30</i> receitas de Saladas</span><b>R$27</b></div>
+      <div class="ri bo"><span><i class="q">30</i> receitas de Lanches</span><b>R$27</b></div>
+      <div class="ri bo"><span><i class="q">30</i> receitas de Molhos</span><b>R$27</b></div>
+      <div class="ri bo"><span><i class="q">30</i> receitas de Churrasco</span><b>R$27</b></div>
+      <div class="ri bo"><span><i class="q">30</i> receitas de Sobremesas</span><b>R$27</b></div>
+      <div class="ri bo"><span><i class="q">30</i> receitas de Sucos</span><b>R$27</b></div>
+      <div class="ri bo"><span><i class="q">30</i> receitas de Drinks</span><b>R$27</b></div>
+      <div class="ri"><span>Suporte, impressão liberada e acesso para sempre</span><b>incluído</b></div>
+      <div class="rt"><span class="lab">Valor se comprasse separado</span><span class="val">R$367</span></div>
+    </div>
+
     <p class="offer-note">Compra 100% segura • Acesso imediato • Para baixar e imprimir • Suporte incluído • 7 dias de garantia</p>
   </div>
 </section>
@@ -954,7 +955,7 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
       </ul>
     </div>
     <div style="margin-top:32px;display:flex;flex-direction:column;align-items:center;gap:12px">
-      <a href="#oferta" class="btn btn-wide btn-arrow">Quero garantir o meu acesso</a>
+      <a href="https://pay.hub.la/ZFxwTnNsliEvdmmJow2h" class="btn btn-wide btn-arrow">Quero garantir o meu acesso</a>
       <div class="under-cta" style="color:var(--ink-soft)">Acesso imediato • pagamento único • 7 dias de garantia</div>
     </div>
   </div>
@@ -990,7 +991,7 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
     <h2>A próxima refeição<br>pode mudar <span class="y">tudo.</span></h2>
     <p class="lead">Ela pode ser só mais uma correria — ou o primeiro capítulo de uma nova relação com a sua cozinha, a sua mesa e as pessoas que você ama. O plano já está pronto. A decisão é sua.</p>
     <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
-      <a href="#oferta" class="btn btn-wide btn-arrow">Quero transformar minha cozinha<span class="sub">Acesso imediato • Garantia de 7 dias</span></a>
+      <a href="https://pay.hub.la/ZFxwTnNsliEvdmmJow2h" class="btn btn-wide btn-arrow">Quero transformar minha cozinha<span class="sub">Acesso imediato • Garantia de 7 dias</span></a>
       <div class="under-cta">Pagamento único • para imprimir • com suporte • seu para sempre</div>
     </div>
   </div>
