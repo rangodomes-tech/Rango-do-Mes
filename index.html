@@ -39,7 +39,6 @@ src="https://www.facebook.com/tr?id=1909249596428305&ev=PageView&noscript=1"
 /></noscript>
 <!-- ===================== FIM META PIXEL ===================== -->
 
-<link rel="preload" as="image" href="images/area-membros.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600;700;800;900&family=Lato:wght@400;700;900&display=swap">
@@ -540,6 +539,17 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
 .eq .e.total .n{color:#fff}
 .bonus-note{text-align:center;font-family:'Barlow';font-weight:700;color:#C9BCA9;font-size:14px;margin-top:22px}
 .receipt .ri.bo span:first-child::before{content:"★ ";color:var(--gold2)}
+
+/* ---------- CARROSSEL DO HERO (CSS puro, sem JS) ---------- */
+.hero-art.cars{--cw:168px;--cg:13px;max-width:520px;margin:0 auto;position:relative}
+.cmask{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 8%,#000 92%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 8%,#000 92%,transparent 100%)}
+.ctrack{display:flex;width:max-content;animation:cslide 38s linear infinite;will-change:transform}
+.hero-art.cars .ctrack img{width:var(--cw);height:calc(var(--cw)*1.25);max-width:none;margin:0 var(--cg) 0 0;flex:none;display:block;object-fit:cover;aspect-ratio:auto;border-radius:13px;border:1px solid rgba(255,255,255,.10);background:#2a2118;box-shadow:0 14px 30px rgba(0,0,0,.45)}
+@keyframes cslide{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+.hero-art.cars:hover .ctrack{animation-play-state:paused}
+.hero-art.cars .hero-badge{right:16px;bottom:-12px}
+@media(min-width:920px){.hero-art.cars{--cw:176px;max-width:460px;margin-left:auto;margin-right:0}}
+@media(prefers-reduced-motion:reduce){.ctrack{animation:none}.cmask{overflow-x:auto}}
 </style>
 
 <!-- ===================== NAV ===================== -->
@@ -558,14 +568,37 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
         <span class="eyebrow">440 receitas · 11 coleções · uma para cada momento</span>
         <h1>440 receitas. A certa para <span class="y">cada momento</span> da sua vida</h1>
       </div>
-      <div class="hero-art mock">
-        <img decoding="async" fetchpriority="high" src="images/area-membros.webp" alt="As 440 receitas do Rango do Mês, organizadas em 11 coleções">
-        <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.3-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.7-7 10-7 10Z" stroke="#D8412F" stroke-width="2.1" stroke-linejoin="round"/></svg>Comida que vira memória</div>
+      <div class="hero-art cars">
+        <div class="cmask">
+          <div class="ctrack">
+            <img src="images/bonus-1.webp" width="680" height="850" alt="Coleção Air Fryer" fetchpriority="high" decoding="async">
+            <img src="images/bonus-2.webp" width="680" height="850" alt="Coleção Churrasco" decoding="async">
+            <img src="images/bonus-8.webp" width="680" height="850" alt="Coleção Sobremesas" decoding="async">
+            <img src="images/bonus-5.webp" width="680" height="850" alt="Coleção Lanches" loading="lazy" decoding="async">
+            <img src="images/bonus-3.webp" width="680" height="850" alt="Coleção Forno" loading="lazy" decoding="async">
+            <img src="images/bonus-4.webp" width="680" height="850" alt="Coleção Frigideira" loading="lazy" decoding="async">
+            <img src="images/bonus-7.webp" width="680" height="850" alt="Coleção Saladas" loading="lazy" decoding="async">
+            <img src="images/bonus-6.webp" width="680" height="850" alt="Coleção Molhos" loading="lazy" decoding="async">
+            <img src="images/bonus-9.webp" width="680" height="850" alt="Coleção Sucos" loading="lazy" decoding="async">
+            <img src="images/bonus-10.webp" width="680" height="850" alt="Coleção Drinks" loading="lazy" decoding="async">
+            <img src="images/bonus-1.webp" width="680" height="850" alt="" aria-hidden="true" loading="lazy" decoding="async">
+            <img src="images/bonus-2.webp" width="680" height="850" alt="" aria-hidden="true" loading="lazy" decoding="async">
+            <img src="images/bonus-8.webp" width="680" height="850" alt="" aria-hidden="true" loading="lazy" decoding="async">
+            <img src="images/bonus-5.webp" width="680" height="850" alt="" aria-hidden="true" loading="lazy" decoding="async">
+            <img src="images/bonus-3.webp" width="680" height="850" alt="" aria-hidden="true" loading="lazy" decoding="async">
+            <img src="images/bonus-4.webp" width="680" height="850" alt="" aria-hidden="true" loading="lazy" decoding="async">
+            <img src="images/bonus-7.webp" width="680" height="850" alt="" aria-hidden="true" loading="lazy" decoding="async">
+            <img src="images/bonus-6.webp" width="680" height="850" alt="" aria-hidden="true" loading="lazy" decoding="async">
+            <img src="images/bonus-9.webp" width="680" height="850" alt="" aria-hidden="true" loading="lazy" decoding="async">
+            <img src="images/bonus-10.webp" width="680" height="850" alt="" aria-hidden="true" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.3-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.7-7 10-7 10Z" stroke="#D8412F" stroke-width="2.1" stroke-linejoin="round"/></svg>11 coleções inclusas</div>
       </div>
       <div class="hero-body">
-        <p class="hero-sub">Da correria de terça ao almoço de domingo que reúne todo mundo. São <strong>440 receitas testadas, separadas em 11 coleções</strong> — você pensa no momento que está vivendo e vai direto nele. E a coleção do dia a dia ainda vem <strong>montada em 4 semanas, com a lista de compras pronta</strong>.</p>
+        <p class="hero-sub">Pratos do dia a dia, sobremesas, lanches, churrasco, sucos, drinks e muito mais — <strong>440 receitas testadas, organizadas em 11 coleções</strong>. Você pensa no momento que está vivendo e vai direto nele. E o dia a dia ainda vem <strong>montado em 4 semanas, com a lista de compras pronta</strong>.</p>
         <div class="hero-cta">
-          <a href="#oferta" class="btn btn-wide btn-arrow">Quero transformar minha cozinha</a>
+          <a href="#oferta" class="btn btn-wide btn-arrow">Quero as 440 receitas</a>
           <div class="under-cta">Acesso na hora &nbsp;•&nbsp; para baixar e imprimir &nbsp;•&nbsp; com suporte &nbsp;•&nbsp; seu para sempre</div>
         </div>
         <div class="trust-strip">
