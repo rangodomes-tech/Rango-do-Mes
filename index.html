@@ -237,7 +237,7 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
   section{padding:54px 0}
   .empathy,.hero-cta{align-items:stretch}
   .btn{width:100%}
-  .nav .btn{width:auto;padding:9px 15px;font-size:13px}
+  .nav .btn{width:auto;padding:9px 15px;font-size:13px;min-height:44px}
   .hero-cta{align-items:stretch}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
@@ -922,8 +922,8 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
         <h3>Rango do Mês completo · 440 receitas</h3>
         <div class="value-was">De <s>R$367</s> por apenas</div>
         <div class="only-today"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" stroke="#241C14" stroke-width="2" stroke-linejoin="round"/></svg>Oferta de lançamento</div>
-        <div class="price-now"><span class="cifra">R$</span>129<span class="cents">,90</span></div>
-        <div class="parc">ou 12x de R$13,20 no cartão</div>
+        <div class="price-now"><span class="cifra">R$</span>67<span class="cents">,00</span></div>
+        <div class="parc">ou 12x de R$6,81 no cartão</div>
         <div class="avista">à vista no Pix — pagamento único, sem mensalidade</div>
         <a href="https://pay.hub.la/ZFxwTnNsliEvdmmJow2h" class="btn btn-wide btn-arrow">Garantir oferta agora</a>
         <div class="pay-icons">
@@ -935,7 +935,7 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
     </div>
 
     <div class="perbreak">
-      <div class="pb"><div class="v">R$0,29</div><div class="l">por receita</div></div>
+      <div class="pb"><div class="v">R$0,15</div><div class="l">por receita</div></div>
       <div class="pb"><div class="v">440</div><div class="l">receitas no total</div></div>
       <div class="pb"><div class="v">Pra sempre</div><div class="l">sem mensalidade</div></div>
     </div>
@@ -1061,21 +1061,43 @@ footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font
 })();
 </script>
 
-<!-- ===================== PIXEL: EVENTO DE CLIQUE NO BOTÃO DE COMPRA ===================== -->
+<!-- ===================== PIXEL: FUNIL COMPLETO (marcos de rolagem + cliques) ===================== -->
 <script>
 (function(){
   try{
-    var botoes = document.querySelectorAll('a[href*="pay.hub.la"]');
-    botoes.forEach(function(b){
-      b.addEventListener('click', function(){
-        if(typeof fbq === 'function'){
-          fbq('track', 'InitiateCheckout', {
-            content_name: 'Rango do Mes - 440 Receitas',
-            currency: 'BRL',
-            value: 129.90
-          });
-        }
-      });
+    var enviado = {};
+    function px(nome, dados, custom){
+      if(typeof fbq !== 'function') return;
+      if(enviado[nome]) return;            /* 1 disparo por visita: funil limpo */
+      enviado[nome] = 1;
+      fbq(custom ? 'trackCustom' : 'track', nome, dados || {});
+    }
+    var PROD = { content_name: 'Rango do Mes - 440 Receitas', currency: 'BRL', value: 67.00 };
+
+    /* MARCOS 1 e 2 - rolagem: passou do hero / chegou na oferta */
+    if('IntersectionObserver' in window){
+      var marcos = [
+        { el: document.querySelector('.moments'), fn: function(){ px('PassouDoHero', {}, true); } },
+        { el: document.getElementById('oferta'),  fn: function(){ px('ViewContent', PROD); } }
+      ];
+      var obs = new IntersectionObserver(function(ents){
+        ents.forEach(function(e){
+          if(!e.isIntersecting) return;
+          obs.unobserve(e.target);
+          marcos.forEach(function(m){ if(m.el === e.target) m.fn(); });
+        });
+      }, { threshold: 0, rootMargin: '0px 0px -12% 0px' });
+      marcos.forEach(function(m){ if(m.el) obs.observe(m.el); });
+    }
+
+    /* MARCO 3 - clicou num CTA que leva para a oferta (intencao) */
+    document.querySelectorAll('a[href="#oferta"]').forEach(function(b){
+      b.addEventListener('click', function(){ px('AddToCart', PROD); });
+    });
+
+    /* MARCO 4 - clicou para ir ao checkout da Hubla */
+    document.querySelectorAll('a[href*="pay.hub.la"]').forEach(function(b){
+      b.addEventListener('click', function(){ px('InitiateCheckout', PROD); });
     });
   }catch(e){}
 })();
