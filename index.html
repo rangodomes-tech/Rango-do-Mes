@@ -132,6 +132,9 @@ footer a{color:#fff}
  .col>img{height:100%;object-fit:cover;border-bottom:0;border-right:2px solid #111}
  .col .txt{border-left:0}
 }
+.col .qt{display:inline-block;background:#111;color:#FFF23F;font-size:12px;font-weight:800;
+ padding:3px 8px;border-radius:20px;vertical-align:middle;margin-left:8px;letter-spacing:.3px;white-space:nowrap}
+section[id]{scroll-margin-top:14px}
 </style>
 </head>
 <body>
@@ -170,7 +173,7 @@ footer a{color:#fff}
   <p class="cap">Os livros por dentro — receitas com foto, passo a passo e dica de ouro.</p>
 
   <div class="btn-wrap">
-    <a href="#comprar" class="btn">QUERO VER AS 440 RECEITAS<small>Todas as 11 coleções num acesso só</small></a>
+    <a href="colecoes" class="btn">QUERO VER AS 440 RECEITAS<small>Todas as 11 coleções num acesso só</small></a>
   </div>
   <div class="under">✔ Acesso imediato &nbsp;✔ Para baixar e imprimir &nbsp;✔ Seu para sempre &nbsp;✔ Garantia de 7 dias</div>
 </div>
@@ -199,7 +202,7 @@ footer a{color:#fff}
 </section>
 
 <!-- ================= 4. AS 10 COLEÇÕES (variedade) ================= -->
-<section>
+<section id="colecoes">
 <div class="w">
   <div class="badge red">Mais 10 coleções &bull; 300 receitas</div>
   <h2>Uma receita pronta para <span class="mk">cada momento</span> da sua vida</h2>
@@ -210,7 +213,7 @@ footer a{color:#fff}
   <div class="col">
     <img src="images/bonus-1.webp" width="560" height="700" alt="Receitas de Air Fryer" loading="lazy" decoding="async">
     <div class="txt">
-    <h4>Air Fryer</h4>
+    <h4>Air Fryer <span class="qt">30 receitas</span></h4>
     <p class="cena">“Cheguei 20h, morta. Ainda tenho que fazer alguma coisa pra comer.”</p>
     <p class="d">Em 15 minutos sai frango dourado, batata crocante, nuggets caseiros, salgadinho assado — <b>comida de verdade sem encarar o fogão</b>. E muito mais.</p>
     </div>
@@ -218,7 +221,7 @@ footer a{color:#fff}
   <div class="col">
     <img src="images/bonus-3.webp" width="560" height="700" alt="Receitas de Forno" loading="lazy" decoding="async">
     <div class="txt">
-    <h4>Forno</h4>
+    <h4>Forno <span class="qt">30 receitas</span></h4>
     <p class="cena">“Domingo todo mundo vem almoçar aqui em casa.”</p>
     <p class="d">Frango assado que perfuma a casa inteira, lasanha, gratinado, pernil, pão caseiro — <b>os pratos que fazem todo mundo sentar junto</b> e ninguém querer levantar. E muito mais.</p>
     </div>
@@ -226,7 +229,7 @@ footer a{color:#fff}
   <div class="col">
     <img src="images/bonus-4.webp" width="560" height="700" alt="Receitas de Frigideira" loading="lazy" decoding="async">
     <div class="txt">
-    <h4>Frigideira</h4>
+    <h4>Frigideira <span class="qt">30 receitas</span></h4>
     <p class="cena">“Tô com fome AGORA e não vou esperar uma hora.”</p>
     <p class="d">Refeição pronta numa panela só: filé acebolado, macarrão na frigideira, omelete recheada, strogonoff rápido — <b>rápido de fazer e leve de lavar depois</b>. E muito mais.</p>
     </div>
@@ -234,7 +237,7 @@ footer a{color:#fff}
   <div class="col">
     <img src="images/bonus-7.webp" width="560" height="700" alt="Receitas de Saladas" loading="lazy" decoding="async">
     <div class="txt">
-    <h4>Saladas</h4>
+    <h4>Saladas <span class="qt">30 receitas</span></h4>
     <p class="cena">“Segunda-feira eu começo a me cuidar.”</p>
     <p class="d">Da folha simples ao prato completo que mata a fome de verdade: salada Caesar, caprese, salpicão, tabule, molhos caseiros — <b>se cuidar deixa de ser castigo</b>. E muito mais.</p>
     </div>
@@ -242,7 +245,7 @@ footer a{color:#fff}
   <div class="col">
     <img src="images/bonus-5.webp" width="560" height="700" alt="Receitas de Lanches" loading="lazy" decoding="async">
     <div class="txt">
-    <h4>Lanches</h4>
+    <h4>Lanches <span class="qt">30 receitas</span></h4>
     <p class="cena">“Sexta à noite, ninguém quer cozinhar.”</p>
     <p class="d">Hambúrguer artesanal suculento, misto quente, cachorro-quente completo, batata suprema, pizza caseira — <b>com gosto dos da rua, mas feito em casa</b>. E muito mais.</p>
     </div>
@@ -250,7 +253,7 @@ footer a{color:#fff}
   <div class="col">
     <img src="images/bonus-6.webp" width="560" height="700" alt="Receitas de Molhos" loading="lazy" decoding="async">
     <div class="txt">
-    <h4>Molhos</h4>
+    <h4>Molhos <span class="qt">30 receitas</span></h4>
     <p class="cena">“Nossa, que sabor é esse?”</p>
     <p class="d">O mesmo arroz, a mesma carne, o mesmo macarrão — com um molho que muda tudo: branco, bolonhesa, pesto, barbecue, cheddar, maionese caseira. <b>O detalhe que transforma o simples em inesquecível.</b> E muito mais.</p>
     </div>
@@ -258,7 +261,7 @@ footer a{color:#fff}
   <div class="col">
     <img src="images/bonus-2.webp" width="560" height="700" alt="Receitas de Churrasco" loading="lazy" decoding="async">
     <div class="txt">
-    <h4>Churrasco</h4>
+    <h4>Churrasco <span class="qt">30 receitas</span></h4>
     <p class="cena">“Deixa comigo, eu faço o churrasco.”</p>
     <p class="d">O ponto certo da picanha, espetinhos, linguiça na brasa, pão de alho, farofa, vinagrete, queijo coalho — <b>o orgulho de ouvir todo mundo elogiar</b>. E muito mais.</p>
     </div>
@@ -266,7 +269,7 @@ footer a{color:#fff}
   <div class="col">
     <img src="images/bonus-8.webp" width="560" height="700" alt="Receitas de Sobremesas" loading="lazy" decoding="async">
     <div class="txt">
-    <h4>Sobremesas</h4>
+    <h4>Sobremesas <span class="qt">30 receitas</span></h4>
     <p class="cena">“Mãe, tem doce?”</p>
     <p class="d">Pudim que desenforma inteiro, brigadeiro de colher, bolo de cenoura, mousse, pavê, cheesecake, petit gâteau — <b>o sorriso que vira lembrança pra vida toda</b>. E muito mais.</p>
     </div>
@@ -274,7 +277,7 @@ footer a{color:#fff}
   <div class="col">
     <img src="images/bonus-9.webp" width="560" height="700" alt="Receitas de Sucos" loading="lazy" decoding="async">
     <div class="txt">
-    <h4>Sucos</h4>
+    <h4>Sucos <span class="qt">30 receitas</span></h4>
     <p class="cena">“Preciso voltar a beber água… e comer melhor.”</p>
     <p class="d">Suco verde detox, funcional pra imunidade, natural pra energia, vitamina que substitui o lanche — <b>o copo que começa seu dia com o pé direito</b>. E muito mais.</p>
     </div>
@@ -282,7 +285,7 @@ footer a{color:#fff}
   <div class="col">
     <img src="images/bonus-10.webp" width="560" height="700" alt="Receitas de Drinks" loading="lazy" decoding="async">
     <div class="txt">
-    <h4>Drinks</h4>
+    <h4>Drinks <span class="qt">30 receitas</span></h4>
     <p class="cena">“Bora abrir alguma coisa?”</p>
     <p class="d">Caipirinha no ponto, mojito, gin tônica, drinks sem álcool pra todo mundo participar — <b>porque a vida também se celebra em casa</b>. E muito mais.</p>
     </div>
