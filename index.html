@@ -1,665 +1,1046 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>O mês inteiro de comida resolvido — Rango do Mês</title>
-<meta name="description" content="Cardápio do mês inteiro montado (5 refeições por dia) com lista de compras pronta para 1 a 4 pessoas, mais 300 receitas para cada momento. 440 receitas testadas por R$129,90, pagamento único e garantia de 7 dias.">
-<meta property="og:title" content="O mês inteiro de comida resolvido — Rango do Mês">
-<meta property="og:description" content="Cardápio de 28 dias + lista de compras pronta + 440 receitas testadas. R$129,90, pagamento único, garantia de 7 dias.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://www.rangodomes.com.br/images/plano-mes.webp">
-<meta name="theme-color" content="#C81E1E">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rango do Mês — A comida certa para cada momento da sua vida</title>
+<meta name="description" content="Nunca mais trave às seis da tarde. O plano completo do mês + 10 coleções de receitas para os momentos que importam: o domingo em família, a sobremesa que faz sorrir, o churrasco com os amigos. 440 receitas para transformar a sua cozinha.">
 
+<!-- ===================== OPEN GRAPH / REDES SOCIAIS ===================== -->
+<!-- Prévia ao compartilhar o link no WhatsApp, Instagram, Facebook, etc. -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Rango do Mês">
+<meta property="og:title" content="Rango do Mês — A comida certa para cada momento da sua vida">
+<meta property="og:description" content="Nunca mais trave às seis da tarde. O plano completo do mês + 10 coleções de receitas para os momentos que importam: o domingo em família, a sobremesa que faz sorrir, o churrasco com os amigos. 440 receitas para transformar a sua cozinha.">
+<meta property="og:image" content="images/area-membros.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="1200">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rango do Mês — A comida certa para cada momento da sua vida">
+<meta name="twitter:description" content="Nunca mais trave às seis da tarde. O plano completo do mês + 10 coleções de receitas para os momentos que importam: o domingo em família, a sobremesa que faz sorrir, o churrasco com os amigos. 440 receitas para transformar a sua cozinha.">
+<meta name="twitter:image" content="images/area-membros.webp">
+
+<!-- ===================== META PIXEL ===================== -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1909249596428305');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1909249596428305&ev=PageView&noscript=1"
+/></noscript>
+<!-- ===================== FIM META PIXEL ===================== -->
+
+<link rel="preload" as="image" href="images/area-membros.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap">
-<link rel="preload" as="image" href="/images/plano-mes.webp" fetchpriority="high">
-
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','1909249596428305');
-fbq('track','PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1909249596428305&ev=PageView&noscript=1" alt=""></noscript>
-<!-- End Meta Pixel Code -->
-
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700;800;900&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
 :root{
-  --red:#C81E1E; --red-d:#A51616; --yellow:#FFF23F; --green:#158435; --green-d:#0F6A29;
-  --ink:#17130F; --cream:#FFFBEA; --paper:#FFFFFF; --muted:#5C534A; --line:#E9DFC8;
-  --display:'Bricolage Grotesque', system-ui, sans-serif;
-  --body:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --r:20px;
+  --paper:#FBF8F2; --paper2:#F2EBDD; --ink:#241C14; --ink2:#4A3B2E; --ink-soft:#6B5A49;
+  --gold:#F4A21E; --gold2:#E0820B; --leaf:#2F7D32; --leaf-soft:#E7F0E5; --tomato:#D8412F;
+  --line:#E6DCC9; --dark:#1C1710; --dark2:#2A2118;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
-body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.55}
-img{display:block;max-width:100%;height:auto}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Lato',sans-serif;font-size:17px;line-height:1.65;color:var(--ink2);background:var(--paper);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
 a{color:inherit}
-b,strong{font-weight:700}
-h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.02;letter-spacing:-0.025em;margin:0}
-h2{font-size:clamp(32px,7vw,52px)}
-h3{font-size:24px;letter-spacing:-0.01em}
-p{margin:0}
-.w{max-width:1120px;margin:0 auto;padding:0 20px}
-.narrow{max-width:760px}
-section{padding:64px 0}
-@media (min-width:860px){section{padding:96px 0}}
-.kick{display:inline-block;font-weight:800;font-size:14px;letter-spacing:.08em;text-transform:uppercase;padding:8px 14px;border-radius:999px;background:var(--ink);color:var(--yellow)}
-.kick.red{background:var(--red);color:var(--yellow)}
-.mark{background:linear-gradient(transparent 58%, var(--yellow) 58%);padding:0 .08em}
-.lead{font-size:19px;color:var(--muted);margin-top:16px}
-@media (min-width:860px){.lead{font-size:21px}}
-.center{text-align:center}
-.stack{display:flex;flex-direction:column;gap:18px}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 22px}
+.narrow{max-width:760px;margin-left:auto;margin-right:auto}
+h1,h2,.display{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;line-height:.98;letter-spacing:.005em}
+.eyebrow{font-family:'Barlow';font-weight:800;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2)}
+.lead{font-size:19px;line-height:1.6}
+strong{font-weight:900;color:var(--ink)}
+.dark strong{color:#fff}
 
-/* Botões */
-.btn{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;min-height:64px;padding:18px 26px;border-radius:16px;background:var(--green);color:#fff;text-decoration:none;font-family:var(--display);font-weight:800;font-size:21px;letter-spacing:-0.01em;text-align:center;box-shadow:0 5px 0 var(--green-d);transition:transform .12s, box-shadow .12s, background .12s}
-.btn:hover{background:#13772F}
-.btn:active{transform:translateY(3px);box-shadow:0 2px 0 var(--green-d)}
-.btn:focus-visible{outline:4px solid var(--yellow);outline-offset:3px}
-.btn svg{flex:none}
-.btn small{display:block;font-family:var(--body);font-weight:600;font-size:14px;opacity:.9;letter-spacing:0}
-.btn .t{display:flex;flex-direction:column;line-height:1.15}
-@media (min-width:600px){.btn{width:auto;min-width:420px}}
-.btn-wrap{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:32px}
-.trust{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;font-size:14px;font-weight:600;color:var(--muted)}
-.trust span{display:inline-flex;align-items:center;gap:6px}
-.trust svg{color:var(--green)}
+/* ---- buttons ---- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:'Barlow';font-weight:800;font-size:19px;letter-spacing:.02em;text-transform:uppercase;background:linear-gradient(135deg,#4BCB5D 0%,#219640 50%,#177E31 100%);color:#fff;padding:19px 34px;border-radius:14px;text-decoration:none;box-shadow:0 6px 0 #116326,0 14px 26px rgba(28,130,50,.4);transition:transform .12s ease,box-shadow .12s ease;border:none;cursor:pointer;text-align:center;line-height:1.15}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 0 #116326,0 18px 32px rgba(28,130,50,.48)}
+.btn:active{transform:translateY(3px);box-shadow:0 3px 0 #116326,0 8px 16px rgba(28,130,50,.34)}
+.btn .sub{display:block;font-weight:600;font-size:12px;letter-spacing:.1em;opacity:.78}
+.btn-wide{width:100%;max-width:460px}
+.btn-arrow::after{content:"›";font-size:26px;line-height:0}
 
-/* Barra do topo */
-.top{background:var(--red);color:#fff;font-size:13px;font-weight:700;letter-spacing:.06em;text-align:center;padding:9px 12px;text-transform:uppercase}
-.top span{color:var(--yellow)}
+/* ---- sections ---- */
+section{padding:70px 0}
+.sec-paper2{background:var(--paper2)}
+.dark{background:var(--dark);color:#E9E0D2}
+.dark h1,.dark h2{color:#fff}
+.kick-center{display:block;text-align:center;margin-bottom:14px}
+.h-band{height:5px;width:62px;background:var(--gold);border-radius:3px;margin:18px 0 26px}
+.center .h-band{margin-left:auto;margin-right:auto}
 
-/* Hero */
-.hero{padding:36px 0 56px;background:var(--cream)}
-.hero .grid{display:grid;gap:32px;align-items:center}
-@media (min-width:900px){.hero{padding:64px 0 88px}.hero .grid{grid-template-columns:1.1fr .9fr;gap:56px}}
-.hero h1{font-size:clamp(40px,10vw,70px);margin-top:16px}
-.hero h1 em{font-style:normal;color:var(--red)}
-.hero .price-line{margin-top:22px;display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 12px;font-weight:600;color:var(--muted)}
-.hero .price-line b{font-family:var(--display);font-size:34px;color:var(--ink);letter-spacing:-0.02em}
-.hero .price-line s{color:#8A7F74}
-.hero .btn-wrap{align-items:stretch;margin-top:20px}
-@media (min-width:600px){.hero .btn-wrap{align-items:flex-start}.hero .trust{justify-content:flex-start}}
-.hero-visual{position:relative;max-width:520px;margin:0 auto;width:100%}
-.hero-visual .ph{border-radius:24px;overflow:hidden;box-shadow:0 24px 50px rgba(60,35,0,.25);transform:rotate(1.5deg)}
-.tag{position:absolute;background:var(--yellow);color:var(--ink);font-family:var(--display);font-weight:800;font-size:17px;line-height:1.1;padding:10px 14px;border-radius:12px;box-shadow:0 8px 18px rgba(0,0,0,.18)}
-.tag.t1{left:-8px;top:18px;transform:rotate(-4deg)}
-.tag.t2{right:-6px;bottom:26px;transform:rotate(3deg);background:var(--red);color:#fff}
-@media (min-width:900px){.tag{font-size:20px}.tag.t1{left:-28px}.tag.t2{right:-24px}}
+/* ---- NAV ---- */
+.nav{position:sticky;top:0;z-index:50;background:rgba(28,23,16,.97);backdrop-filter:blur(6px);border-bottom:1px solid rgba(244,162,30,.25)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-family:'Anton';font-size:21px;color:#fff;letter-spacing:.02em;text-transform:uppercase}
+.brand small{display:block;font-family:'Barlow';font-weight:700;font-size:8.5px;letter-spacing:.18em;color:var(--gold);margin-top:-2px}
+.nav .btn{padding:11px 20px;font-size:14px;box-shadow:0 4px 0 #116326}
+.nav-cta-hide{display:inline-flex}
 
-/* Dor */
-.dor{background:var(--ink);color:#fff}
-.dor h2{color:#fff}
-.pains{display:grid;gap:14px;margin-top:32px}
-@media (min-width:760px){.pains{grid-template-columns:repeat(2,minmax(0,1fr))}}
-.pain{background:#241E18;border-radius:var(--r);padding:22px 22px 22px 20px;display:flex;gap:14px;align-items:flex-start;font-size:19px;font-weight:600;line-height:1.35}
-.pain svg{flex:none;color:#FF6B5B;margin-top:2px}
-.turn{margin-top:40px;font-family:var(--display);font-weight:800;font-size:clamp(28px,6vw,42px);line-height:1.08;letter-spacing:-0.02em}
-.turn span{color:var(--yellow)}
-.dor .lead{color:#D9D0C4}
+/* ---- HERO ---- */
+.hero{background:radial-gradient(120% 90% at 84% -8%,#291d11 0%,#14100a 52%);color:#EDE4D6;padding:64px 0 76px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.04) 1px,transparent 0);background-size:22px 22px;pointer-events:none}
+.hero .wrap{position:relative;z-index:1}
+.hero h1{font-size:clamp(36px,7.4vw,62px);color:#fff;margin:14px 0 0;line-height:1.05}
+.hero h1 .y{color:var(--gold)}
+.hero-sub{font-size:clamp(18px,2.5vw,22px);line-height:1.55;color:#E0D5C5;margin:20px 0 0;max-width:640px}
+.hero-cta{margin-top:34px;display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.under-cta{font-family:'Barlow';font-weight:600;font-size:14px;letter-spacing:.04em;color:#C9BCA9}
+.under-cta b{color:var(--gold);font-weight:800}
+.trust-strip{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px;padding-top:26px;border-top:1px solid rgba(255,255,255,.12)}
+.trust-strip div{display:flex;align-items:center;gap:9px;font-family:'Barlow';font-weight:700;font-size:14px;color:#D8CCBB}
+.trust-strip svg{width:20px;height:20px;flex:none}
 
-/* Como funciona */
-.steps{display:grid;gap:22px;margin-top:40px}
-@media (min-width:860px){.steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
-.step{background:var(--paper);border-radius:var(--r);overflow:hidden;box-shadow:0 2px 0 var(--line)}
-.step .ph{background:#111;aspect-ratio:4/3;overflow:hidden}
-.step .ph img{width:100%;height:100%;object-fit:cover}
-.step .tx{padding:22px}
-.step .n{display:inline-flex;width:40px;height:40px;border-radius:50%;background:var(--red);color:#fff;font-family:var(--display);font-weight:800;font-size:20px;align-items:center;justify-content:center;margin-bottom:12px}
-.step p{color:var(--muted);margin-top:8px;font-size:17px}
+/* ---- price tag signature ---- */
+.tag{position:relative;background:var(--gold);color:var(--ink);border-radius:12px;padding:18px 22px 18px 34px;display:inline-block}
+.tag::before{content:"";position:absolute;left:13px;top:50%;width:13px;height:13px;background:var(--dark);border-radius:50%;transform:translateY(-50%)}
+.tag .tk{font-family:'Barlow';font-weight:800;font-size:11px;letter-spacing:.16em;text-transform:uppercase;opacity:.85}
+.tag .tv{font-family:'Anton';font-size:34px;line-height:1}
 
-/* Cardápio */
-.cardapio{background:var(--paper)}
-.meals{display:grid;gap:10px;margin-top:28px}
-.meal{display:flex;align-items:center;gap:16px;padding:16px 18px;border-radius:16px;background:var(--cream)}
-.meal .q{font-family:var(--display);font-weight:800;font-size:30px;width:56px;flex:none;color:var(--red);letter-spacing:-0.02em}
-.meal div{font-size:17px;line-height:1.35}
-.meal div b{display:block;font-size:19px}
-.big-note{margin-top:22px;padding:18px 20px;border-radius:16px;background:var(--yellow);font-weight:700;font-size:19px;line-height:1.35}
-.two{display:grid;gap:40px}
-@media (min-width:900px){.two{grid-template-columns:1fr 1fr;gap:64px;align-items:start}}
-.lists{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.lists img{border-radius:14px;background:#111;aspect-ratio:1/1;object-fit:cover;width:100%}
-.checks{list-style:none;padding:0;margin:24px 0 0;display:flex;flex-direction:column;gap:14px}
-.checks li{display:flex;gap:12px;align-items:flex-start;font-size:18px;line-height:1.4}
-.checks svg{flex:none;color:var(--green);margin-top:1px}
-.food-note{margin-top:28px;border-left:0;padding:22px;border-radius:var(--r);background:#F2FBF4;color:#10241A}
-.food-note h3{font-size:22px}
-.food-note p{margin-top:8px;font-size:17px}
+/* ---- PROBLEM ---- */
+.pain-list{margin:26px 0 0;display:grid;gap:14px}
+.pain{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:13px;padding:16px 18px}
+.pain .x{flex:none;width:30px;height:30px;border-radius:9px;background:#FCEAE7;display:flex;align-items:center;justify-content:center}
+.pain .x svg{width:17px;height:17px}
+.pain p{font-size:16.5px;line-height:1.5}
+.pain b{color:var(--ink);font-weight:900}
+.empathy{margin-top:30px;background:var(--ink);color:#F1E8DA;border-radius:16px;padding:26px 26px;font-size:19px;line-height:1.6}
+.empathy b{color:var(--gold)}
 
-/* Ritmos */
-.rhythm{display:grid;gap:14px;margin-top:32px}
-@media (min-width:860px){.rhythm{grid-template-columns:repeat(3,minmax(0,1fr))}}
-.rhythm div{background:var(--paper);border-radius:var(--r);padding:22px;box-shadow:0 2px 0 var(--line)}
-.rhythm b{display:block;font-family:var(--display);font-size:22px;margin-bottom:6px}
-.rhythm p{color:var(--muted);font-size:17px}
+/* ---- HOW (steps) ---- */
+.steps{display:grid;gap:18px;margin-top:34px}
+@media(min-width:760px){.steps{grid-template-columns:1fr 1fr}}
+.step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 22px;position:relative;overflow:hidden}
+.step .num{font-family:'Anton';font-size:46px;color:var(--paper2);position:absolute;top:8px;right:18px;line-height:1}
+.step .ic{width:50px;height:50px;border-radius:13px;background:var(--ink);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.step .ic svg{width:27px;height:27px}
+.step h3{font-family:'Barlow';font-weight:800;font-size:20px;color:var(--ink);text-transform:uppercase;letter-spacing:.01em;margin-bottom:7px;position:relative}
+.step p{font-size:16px;line-height:1.5;position:relative}
 
-/* Coleções */
-.colecoes{background:var(--ink);color:#fff}
-.colecoes h2{color:#fff}
-.colecoes .lead{color:#D9D0C4}
-.cols{display:grid;grid-auto-flow:column;grid-auto-columns:76%;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 20px 18px;margin:32px -20px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-.cols::-webkit-scrollbar{display:none}
-@media (min-width:700px){.cols{grid-auto-columns:42%}}
-@media (min-width:1000px){.cols{grid-auto-flow:row;grid-template-columns:repeat(5,minmax(0,1fr));overflow:visible;margin:40px 0 0;padding:0}}
-.col{scroll-snap-align:start;background:#241E18;border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
-.col img{aspect-ratio:4/5;object-fit:cover;width:100%}
-.col .cx{padding:14px 14px 18px}
-.col b{display:block;font-family:var(--display);font-size:20px}
-.col span{display:block;font-size:14px;color:#BFB5A8;margin-top:4px;line-height:1.35}
-.swipe{font-size:14px;color:#BFB5A8;margin-top:6px;text-align:center}
-@media (min-width:1000px){.swipe{display:none}}
-.dishes{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;justify-content:center}
-.dishes span{background:#241E18;border-radius:999px;padding:8px 14px;font-size:15px;font-weight:600}
+/* ---- INSIDE (modules) ---- */
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:30px 0 36px}
+.stat{background:var(--ink);color:#fff;border-radius:14px;padding:20px 12px;text-align:center}
+.stat .v{font-family:'Anton';font-size:clamp(30px,7vw,46px);color:var(--gold);line-height:1}
+.stat .l{font-family:'Barlow';font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:#D8CCBB;margin-top:6px}
+.mods{display:grid;gap:16px}
+.mod{display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;border-left:6px solid var(--gold)}
+.mod .mn{flex:none;width:54px;height:54px;border-radius:14px;background:var(--paper2);display:flex;align-items:center;justify-content:center;font-family:'Anton';font-size:24px;color:var(--gold2)}
+.mod h3{font-family:'Barlow';font-weight:800;font-size:19px;color:var(--ink);text-transform:uppercase;margin-bottom:4px}
+.mod .tagn{font-family:'Barlow';font-weight:700;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold2);margin-bottom:7px}
+.mod p{font-size:16px;line-height:1.5}
+.included{margin-top:30px;background:var(--leaf-soft);border:1px solid #CFE3CC;border-radius:16px;padding:24px 24px}
+.included h4{font-family:'Barlow';font-weight:800;font-size:17px;text-transform:uppercase;letter-spacing:.04em;color:var(--leaf);margin-bottom:14px}
+.check{list-style:none;display:grid;gap:11px}
+.check li{display:flex;gap:12px;align-items:flex-start;font-size:16.5px;line-height:1.45}
+.check li b{color:var(--ink);font-weight:900}
+.check .ck{flex:none;width:24px;height:24px;border-radius:50%;background:var(--leaf);display:flex;align-items:center;justify-content:center;margin-top:1px}
+.check .ck svg{width:14px;height:14px}
 
-/* Por dentro */
-.inside-ph{border-radius:24px;overflow:hidden;background:#111}
-.guide{display:grid;gap:10px;margin-top:20px}
-@media (min-width:600px){.guide{grid-template-columns:repeat(2,minmax(0,1fr))}}
-.guide div{background:var(--paper);border-radius:14px;padding:14px 16px;font-size:16px;line-height:1.35;box-shadow:0 2px 0 var(--line)}
-.guide b{display:block;font-size:17px}
+/* ---- BENEFITS ---- */
+.bens{display:grid;gap:16px;margin-top:30px}
+@media(min-width:680px){.bens{grid-template-columns:1fr 1fr}}
+.ben{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
+.ben .ic{width:46px;height:46px;border-radius:12px;background:#FDEFD7;display:flex;align-items:center;justify-content:center;margin-bottom:13px}
+.ben .ic svg{width:25px;height:25px}
+.ben h3{font-family:'Barlow';font-weight:800;font-size:18px;color:var(--ink);margin-bottom:6px}
+.ben p{font-size:15.5px;line-height:1.5}
 
-/* Conta */
-.conta{background:var(--yellow)}
-.vs{display:grid;gap:14px;margin-top:32px;position:relative}
-@media (min-width:760px){.vs{grid-template-columns:1fr 1fr;gap:20px}}
-.vs .c{border-radius:var(--r);padding:26px}
-.vs .c1{background:var(--ink);color:#fff}
-.vs .c2{background:var(--red);color:#fff}
-.vs .c small{display:block;font-weight:700;font-size:15px;opacity:.85}
-.vs .c b{display:block;font-family:var(--display);font-size:52px;line-height:1;letter-spacing:-0.03em;margin:6px 0}
-.vs .c p{font-size:17px;opacity:.95}
-.conta .punch{margin-top:28px;font-family:var(--display);font-weight:800;font-size:clamp(24px,5vw,34px);line-height:1.12;letter-spacing:-0.02em;text-align:center}
+/* ---- AUDIENCE ---- */
+.aud{display:grid;gap:18px;margin-top:30px}
+@media(min-width:760px){.aud{grid-template-columns:1fr 1fr}}
+.aud-card{border-radius:16px;padding:24px}
+.aud-yes{background:#fff;border:2px solid var(--leaf)}
+.aud-no{background:#fff;border:2px solid var(--line)}
+.aud-card h3{font-family:'Barlow';font-weight:800;font-size:19px;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.aud-yes h3{color:var(--leaf)}.aud-no h3{color:var(--ink-soft)}
+.aud-card ul{list-style:none;display:grid;gap:10px}
+.aud-card li{display:flex;gap:11px;font-size:16px;line-height:1.45}
+.aud-card li svg{flex:none;width:20px;height:20px;margin-top:2px}
 
-/* Oferta */
-.oferta{background:var(--cream)}
-.offer{max-width:620px;margin:0 auto;background:var(--paper);border-radius:28px;box-shadow:0 24px 60px rgba(60,35,0,.16);overflow:hidden;border:3px solid var(--ink)}
-.offer .hd{background:var(--ink);color:#fff;padding:22px 24px;text-align:center}
-.offer .hd b{font-family:var(--display);font-size:26px;display:block}
-.offer .hd span{color:var(--yellow);font-weight:700;font-size:15px}
-.offer .bd{padding:24px}
-@media (min-width:600px){.offer .bd{padding:32px 36px}}
-.offer .mock{border-radius:16px;overflow:hidden;background:#111;margin-bottom:22px}
-.vrow{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px dashed var(--line);font-size:16px;line-height:1.35}
-.vrow svg{flex:none;color:var(--green);margin-top:1px}
-.vrow .d{flex:1}
-.vrow .d b{display:block;font-size:17px}
-.vrow .v{font-weight:700;color:#8A7F74;white-space:nowrap}
-.vrow .v.inc{color:var(--green)}
-.total{text-align:center;margin-top:22px}
-.total .from{font-size:18px;color:var(--muted);font-weight:600}
-.total .from s{color:#8A7F74}
-.total .now{font-family:var(--display);font-weight:800;font-size:clamp(54px,15vw,76px);line-height:1;letter-spacing:-0.04em;color:var(--red);margin-top:4px}
-.total .inst{font-size:18px;font-weight:600;margin-top:6px}
-.total .per{display:inline-block;margin-top:12px;background:var(--yellow);border-radius:999px;padding:6px 14px;font-weight:800;font-size:15px}
-.offer .btn{width:100%;min-width:0;margin-top:22px}
-.secure{display:flex;justify-content:center;gap:8px 16px;flex-wrap:wrap;margin-top:16px;font-size:14px;font-weight:600;color:var(--muted)}
-.secure span{display:inline-flex;gap:6px;align-items:center}
+/* ---- PROOF ---- */
+.quotes{display:grid;gap:18px;margin-top:30px}
+@media(min-width:760px){.quotes{grid-template-columns:1fr 1fr 1fr}}
+.quote{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px}
+.stars{color:var(--gold);font-size:17px;letter-spacing:2px;margin-bottom:12px}
+.quote p{font-size:16px;line-height:1.55;font-style:italic;color:var(--ink2)}
+.quote .who{margin-top:16px;font-family:'Barlow';font-weight:800;font-size:14px;color:var(--ink);text-transform:uppercase;letter-spacing:.03em}
+.quote .where{font-family:'Barlow';font-weight:600;font-size:13px;color:var(--ink-soft);text-transform:none;letter-spacing:0}
 
-/* Garantia */
-.garantia .box{display:grid;gap:24px;align-items:center;background:var(--paper);border-radius:28px;padding:28px;box-shadow:0 2px 0 var(--line)}
-@media (min-width:760px){.garantia .box{grid-template-columns:auto 1fr;padding:40px;gap:40px}}
-.seal{width:170px;height:170px;border-radius:50%;background:var(--ink);color:var(--yellow);border:8px solid var(--yellow);box-shadow:0 0 0 4px var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;margin:0 auto;transform:rotate(-8deg)}
-.seal b{font-family:var(--display);font-size:72px;line-height:.85}
-.seal span{font-size:14px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;line-height:1.2}
-.garantia p{margin-top:12px;color:var(--muted)}
+/* ---- OFFER ---- */
+.offer-box{background:#fff;border-radius:22px;padding:8px;max-width:560px;margin:36px auto 0;box-shadow:0 30px 60px rgba(0,0,0,.4)}
+.offer-inner{border:2px dashed var(--line);border-radius:18px;padding:30px 26px;text-align:center}
+.offer-inner h3{font-family:'Barlow';font-weight:800;font-size:18px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink);margin-bottom:8px}
+.value-was{font-family:'Barlow';font-weight:700;font-size:16px;color:var(--ink-soft);margin-bottom:4px}
+.value-was s{color:var(--tomato)}
+.only-today{display:inline-flex;align-items:center;gap:6px;background:var(--gold);color:#241C14;font-family:'Barlow';font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:6px 13px;border-radius:999px;margin:9px 0 2px;box-shadow:0 6px 16px rgba(244,162,30,.4)}
+.only-today svg{width:15px;height:15px;flex:none}
+.price-now{font-family:'Anton';font-size:clamp(54px,15vw,76px);color:var(--ink);line-height:.95;margin:6px 0}
+.price-now .cents{font-size:.5em;vertical-align:super}
+.price-now .cifra{font-size:.42em;vertical-align:super;color:var(--gold2)}
+.parc{font-family:'Barlow';font-weight:800;font-size:18px;color:var(--leaf);margin-bottom:4px}
+.avista{font-family:'Barlow';font-weight:600;font-size:15px;color:var(--ink-soft);margin-bottom:22px}
+.offer-box .btn{margin-top:4px}
+.pay-icons{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 16px;margin-top:18px;font-family:'Barlow';font-weight:700;font-size:13px;color:var(--ink-soft)}
+.pay-icons span{display:flex;align-items:center;gap:6px}
+.pay-icons svg{width:18px;height:18px}
+.offer-note{text-align:center;color:#C9BCA9;font-family:'Barlow';font-weight:600;font-size:14px;margin-top:22px}
 
-/* Pra quem */
-.fit{display:grid;gap:16px;margin-top:32px}
-@media (min-width:760px){.fit{grid-template-columns:1fr 1fr}}
-.fit > div{border-radius:var(--r);padding:24px;background:var(--paper);box-shadow:0 2px 0 var(--line)}
-.fit h3{font-size:22px}
-.fit ul{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-direction:column;gap:10px}
-.fit li{display:flex;gap:10px;font-size:17px;line-height:1.4}
-.fit .no svg{color:var(--red)}
-.fit .yes svg{color:var(--green)}
-.fit svg{flex:none;margin-top:2px}
+/* ---- GUARANTEE ---- */
+.guar{display:flex;gap:24px;align-items:center;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px;max-width:780px;margin:0 auto}
+.seal{flex:none;width:120px;height:120px;border-radius:50%;background:var(--leaf-soft);border:3px solid var(--leaf);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.seal .big{font-family:'Anton';font-size:38px;color:var(--leaf);line-height:.9}
+.seal .sm{font-family:'Barlow';font-weight:800;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--leaf)}
+.guar-tx{flex:1;min-width:240px}
+.guar-tx h3{font-family:'Barlow';font-weight:800;font-size:21px;color:var(--ink);text-transform:uppercase;margin-bottom:8px}
+.guar-tx p{font-size:16.5px;line-height:1.55}
 
-/* FAQ */
-.faq{background:var(--paper)}
-.qa{margin-top:28px;border-top:2px solid var(--ink)}
-.qa details{border-bottom:1px solid var(--line)}
-.qa summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-weight:700;font-size:18px;position:relative;line-height:1.35}
-.qa summary::-webkit-details-marker{display:none}
-.qa summary::after{content:"";position:absolute;right:6px;top:50%;width:12px;height:12px;border-right:3px solid var(--red);border-bottom:3px solid var(--red);transform:translateY(-70%) rotate(45deg);transition:transform .15s}
-.qa details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
-.qa summary:focus-visible{outline:3px solid var(--red);outline-offset:2px}
-.qa details p{padding:0 0 20px;color:var(--muted);font-size:17px}
+/* ---- FAQ ---- */
+.faq{max-width:760px;margin:30px auto 0}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:13px;margin-bottom:12px;overflow:hidden}
+.faq summary{list-style:none;cursor:pointer;padding:19px 22px;font-family:'Barlow';font-weight:800;font-size:17px;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:14px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:'Anton';font-size:26px;color:var(--gold2);flex:none;line-height:.7;transition:transform .2s}
+.faq details[open] summary::after{content:"–"}
+.faq .ans{padding:0 22px 20px;font-size:16px;line-height:1.6;color:var(--ink2)}
 
-/* Final */
-.final{background:var(--red);color:#fff;text-align:center}
-.final h2{color:#fff}
-.final .lead{color:#FFE3DF}
-.final .btn{background:var(--yellow);color:var(--ink);box-shadow:0 5px 0 #B5AA1F}
-.final .btn:hover{background:#FFF66B}
-.final .trust{color:#FFE3DF}
-.final .trust svg{color:var(--yellow)}
+/* ---- FINAL CTA ---- */
+.final{background:radial-gradient(120% 100% at 50% 0%,#3a2c1c 0%,var(--dark) 60%);text-align:center}
+.final h2{font-size:clamp(32px,7vw,58px);color:#fff;margin-bottom:18px}
+.final h2 .y{color:var(--gold)}
+.final .lead{color:#DDD1C0;max-width:600px;margin:0 auto 32px}
 
-footer{background:var(--ink);color:#BFB5A8;font-size:14px;padding:36px 0 120px;text-align:center}
-footer b{color:#fff;font-family:var(--display);font-size:20px;display:block;margin-bottom:8px}
-footer a{color:#fff}
-footer p{margin-top:8px}
-@media (min-width:860px){footer{padding-bottom:40px}}
+/* ---- FOOTER ---- */
+footer{background:#15110C;color:#9A8B79;padding:44px 0 40px;font-size:13.5px;line-height:1.7}
+footer .brand{font-size:24px;margin-bottom:8px}
+footer a{color:var(--gold);text-decoration:none}
+footer .fnote{margin-top:18px;padding-top:18px;border-top:1px solid #2A2118;font-size:12.5px;color:#7A6D5D}
 
-/* Barra fixa mobile */
-.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--paper);border-top:1px solid var(--line);box-shadow:0 -8px 24px rgba(0,0,0,.12);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:12px;transform:translateY(110%);visibility:hidden;transition:transform .25s, visibility .25s}
-.sticky.on{transform:none;visibility:visible}
-.sticky .p{line-height:1.15}
-.sticky .p b{font-family:var(--display);font-size:22px;display:block}
-.sticky .p span{font-size:12px;font-weight:600;color:var(--muted)}
-.sticky .btn{min-height:52px;min-width:0;width:auto;flex:1;font-size:18px;white-space:nowrap;padding:12px 16px;box-shadow:0 4px 0 var(--green-d)}
-@media (min-width:860px){.sticky{display:none}}
+/* ---- STICKY MOBILE BAR ---- */
+.stickybar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(28,23,16,.98);backdrop-filter:blur(6px);border-top:2px solid var(--gold);padding:10px 14px;display:none;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 -8px 24px rgba(0,0,0,.35)}
+.stickybar .sp{font-family:'Barlow';font-weight:800;color:#fff;font-size:13px;line-height:1.2}
+.stickybar .sp b{font-family:'Anton';font-weight:400;font-size:21px;color:var(--gold);display:block}
+.stickybar .btn{padding:14px 20px;font-size:15px;box-shadow:0 4px 0 #116326}
+@media(max-width:720px){
+  .stickybar{display:flex}
+  .nav-cta-hide{display:inline-flex}
+  section{padding:54px 0}
+  .empathy,.hero-cta{align-items:stretch}
+  .btn{width:100%}
+  .nav .btn{width:auto;padding:9px 15px;font-size:13px}
+  .hero-cta{align-items:stretch}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* ---- product imagery ---- */
+.hero-grid{display:grid;gap:22px;align-items:center}
+.hero-head{display:flex;flex-direction:column}
+@media(min-width:920px){
+  .hero-grid{grid-template-columns:1.12fr .88fr;column-gap:40px;row-gap:16px;
+    grid-template-areas:"head art" "body art";align-items:center}
+  .hero-head{grid-area:head;align-self:end}
+  .hero-body{grid-area:body;align-self:start}
+  .hero-art{grid-area:art;align-self:center}
+}
+.hero-art{position:relative}
+.hero-art img{width:100%;max-width:480px;margin:0 auto;aspect-ratio:1/1;object-fit:cover;
+  border-radius:20px;box-shadow:0 28px 58px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.10)}
+.hero-badge{position:absolute;right:14px;bottom:14px;display:flex;align-items:center;gap:7px;
+  background:rgba(251,248,242,.96);color:var(--ink);font-family:'Barlow';font-weight:800;
+  font-size:12.5px;letter-spacing:.02em;padding:9px 13px;border-radius:11px;
+  box-shadow:0 10px 24px rgba(0,0,0,.28)}
+.hero-badge svg{width:15px;height:15px;flex:none}
+@media(min-width:920px){.hero-art img{max-width:440px;margin-left:auto;margin-right:0}}
+@media(max-width:919px){.hero{padding:40px 0 56px}.hero-grid{gap:8px}.hero-art{margin:0 auto}.hero .hero-art.mock img{max-width:440px;aspect-ratio:7/5;object-fit:cover;object-position:50% 47%}}
+.covers{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:16px;margin:8px 0 34px}
+.covers figure{margin:0}
+.covers img{width:100%;border-radius:11px;box-shadow:0 14px 28px rgba(36,28,20,.24);border:1px solid rgba(0,0,0,.06)}
+.covers figcaption{font-family:'Barlow';font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);text-align:center;margin-top:10px}
+.peek{display:grid;grid-template-columns:1fr;gap:20px;margin-top:32px}
+@media(min-width:760px){.peek{grid-template-columns:repeat(3,1fr)}}
+.peek figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px;box-shadow:0 16px 34px rgba(36,28,20,.13)}
+.peek img{width:100%;border-radius:9px;display:block}
+.peek figcaption{font-family:'Barlow';font-weight:800;font-size:14.5px;color:var(--ink);text-align:center;margin:14px 4px 8px;text-transform:none;letter-spacing:0}
+.peek figcaption span{display:block;font-weight:600;font-size:12.5px;color:var(--ink-soft);margin-top:2px}
+
+.hero-sub strong{color:var(--gold)}
+
+/* ---- chef icon (humaniza) ---- */
+.chef{width:1.16em;height:1.16em;display:inline-block;vertical-align:-.24em;margin-right:.5em;color:inherit}
+.kick-center .chef{vertical-align:-.2em}
+/* ---- micro-interações / dopamina ---- */
+.step,.mod,.ben,.aud-card,.quote{transition:transform .2s cubic-bezier(.2,.7,.2,1),box-shadow .2s ease,border-color .2s ease}
+.step:hover,.ben:hover,.quote:hover{transform:translateY(-6px);box-shadow:0 20px 38px rgba(36,28,20,.17)}
+.mod:hover{transform:translateY(-5px);box-shadow:0 20px 38px rgba(36,28,20,.17);border-left-color:var(--gold2)}
+.aud-yes:hover{transform:translateY(-5px);box-shadow:0 20px 38px rgba(47,125,50,.18)}
+.aud-no:hover{transform:translateY(-5px);box-shadow:0 20px 38px rgba(36,28,20,.12)}
+.peek figure,.covers figure{transition:transform .22s ease,box-shadow .22s ease}
+.peek figure:hover{transform:translateY(-7px) scale(1.012);box-shadow:0 26px 48px rgba(36,28,20,.22)}
+.covers img{transition:transform .28s ease}
+.covers figure:hover img{transform:scale(1.05)}
+.stat{transition:transform .2s ease}
+.stat:hover{transform:translateY(-4px) scale(1.03)}
+.check li .ck{transition:transform .2s ease}
+.check li:hover .ck{transform:scale(1.18) rotate(-6deg)}
+/* botão: brilho que passa + pulso suave no CTA principal */
+.btn{position:relative;overflow:hidden}
+.btn::before{content:"";position:absolute;top:0;left:-140%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-18deg);transition:left .6s ease;pointer-events:none}
+.btn:hover::before{left:160%}
+@keyframes ctaPulse{0%,100%{box-shadow:0 6px 0 #116326,0 14px 26px rgba(28,130,50,.32)}50%{box-shadow:0 6px 0 #116326,0 16px 40px rgba(60,190,90,.6)}}
+.btn-wide{animation:ctaPulse 3s ease-in-out infinite}
+.btn-wide:hover{animation:none}
+/* reveal ao rolar */
+.rv{opacity:0;transform:translateY(24px)}
+.rv-in{opacity:1;transform:none;transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.2,1)}
+@media(prefers-reduced-motion:reduce){.btn-wide{animation:none}.btn::before{display:none}.rv{opacity:1;transform:none}}
+
+/* ---- gradiente escuro em movimento lento ---- */
+.dark,.final{position:relative;overflow:hidden}
+.dark>.wrap,.final>.wrap{position:relative;z-index:1}
+.hero::before,.dark::before,.final::before{content:"";position:absolute;inset:-25%;z-index:0;pointer-events:none;background:radial-gradient(50% 55% at 28% 30%,rgba(244,162,30,.06),transparent 60%),radial-gradient(48% 52% at 74% 72%,rgba(216,65,47,.05),transparent 62%);background-size:200% 200%,200% 200%;background-repeat:no-repeat;animation:bgDrift 12s ease-in-out infinite}
+@keyframes bgDrift{0%{background-position:0% 38%,100% 62%}50%{background-position:100% 62%,0% 38%}100%{background-position:0% 38%,100% 62%}}
+@media(prefers-reduced-motion:reduce){.hero::before,.dark::before,.final::before{animation:none}}
+
+.breakdown-band{padding:58px 0}
+.bd-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:28px}
+.bd{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:24px 10px;transition:transform .2s ease,box-shadow .2s ease}
+.bd:hover{transform:translateY(-5px);box-shadow:0 18px 34px rgba(0,0,0,.32)}
+.bd-n{font-family:Anton,sans-serif;font-size:clamp(36px,5.5vw,54px);color:var(--gold);line-height:1}
+.bd-l{font-weight:700;color:#EDE4D6;font-size:clamp(13px,1.6vw,15px);margin-top:8px;line-height:1.2}
+
+/* ---- lifestyle photos (tangibiliza + humaniza) ---- */
+.shot{margin:32px auto 0;max-width:600px;border-radius:18px;overflow:hidden;position:relative;
+  box-shadow:0 22px 46px rgba(36,28,20,.18);border:1px solid var(--line);background:#fff;
+  transition:transform .22s ease,box-shadow .22s ease}
+.shot img{width:100%;height:auto;display:block;aspect-ratio:1/1;object-fit:cover}
+.shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 18px 15px;
+  font-family:'Barlow';font-weight:800;font-size:13.5px;letter-spacing:.03em;color:#fff;
+  text-transform:uppercase;background:linear-gradient(to top,rgba(18,13,8,.86),rgba(18,13,8,0))}
+.shot figcaption span{display:block;font-weight:600;font-size:12.5px;letter-spacing:.01em;
+  text-transform:none;color:#F0E7D8;margin-top:3px}
+.shot:hover{transform:translateY(-5px);box-shadow:0 30px 54px rgba(36,28,20,.24)}
+.shot-row{display:grid;gap:18px;margin-top:30px}
+@media(min-width:680px){.shot-row{grid-template-columns:1fr 1fr}}
+.shot-row .shot{margin:0;max-width:none}
+.final .shot,.dark .shot{border-color:rgba(255,255,255,.12)}
+
+/* ---- testimonial cards: avatar + nome + estrelas ---- */
+.q-head{display:flex;align-items:center;gap:13px;margin-bottom:15px}
+.avatar{flex:none;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;
+  justify-content:center;font-family:'Barlow';font-weight:800;font-size:16px;color:#fff;
+  background:var(--a,#C2912F);background-size:cover;background-position:center;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.4),0 4px 10px rgba(36,28,20,.16)}
+.q-id{min-width:0}
+.q-id .who{margin:0;font-family:'Barlow';font-weight:800;font-size:15px;color:var(--ink);
+  text-transform:none;letter-spacing:0;line-height:1.15}
+.q-id .where{display:block;font-family:'Barlow';font-weight:600;font-size:12.5px;
+  color:var(--ink-soft);text-transform:none;letter-spacing:0;margin-top:1px}
+.q-id .stars{margin:4px 0 0;font-size:14px;line-height:1}
+.quote>p{margin-top:0}
+
+/* ---- galeria de pratos prontos (tangibiliza) ---- */
+.dish-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:36px}
+.dish{flex:1 1 calc(50% - 7px);max-width:calc(50% - 7px);margin:0;border-radius:14px;
+  overflow:hidden;background:#1b1610;border:1px solid rgba(36,28,20,.14);
+  box-shadow:0 14px 30px rgba(36,28,20,.16);transition:transform .2s ease,box-shadow .2s ease}
+.dish img{width:100%;height:auto;display:block;aspect-ratio:4/5;object-fit:cover}
+.dish:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(36,28,20,.26)}
+@media(min-width:640px){.dish{flex-basis:calc(33.333% - 12px);max-width:calc(33.333% - 12px)}}
+@media(min-width:1000px){.dish{flex-basis:calc(25% - 14px);max-width:calc(25% - 14px)}}
+.dish-note{text-align:center;font-family:'Barlow';font-weight:700;color:var(--ink-soft);font-size:14px;margin-top:24px}
+
+/* ---- âncora de preço: comparação com alternativas ---- */
+.anchor-cmp{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:640px;margin:24px auto 0}
+.anchor-cmp .ac{flex:1 1 172px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);border-radius:12px;padding:12px 14px;text-align:left}
+.anchor-cmp .ac .lab{display:block;font-family:'Barlow';font-weight:600;font-size:12.5px;color:#C9BCA9;line-height:1.25;margin-bottom:3px}
+.anchor-cmp .ac .val{font-family:'Barlow';font-weight:800;font-size:18px;color:#E7D9C4}
+.anchor-cmp-vs{display:block;text-align:center;max-width:600px;margin:14px auto 0;font-family:'Barlow';font-weight:700;font-size:15px;color:#F3E7D4;line-height:1.45}
+.anchor-cmp-vs b{color:var(--gold);font-weight:800}
+
+/* ---- bloco de urgência (custo de esperar) ---- */
+.urg{display:flex;align-items:flex-start;gap:13px;max-width:600px;margin:24px auto 0;text-align:left;background:rgba(244,162,30,.10);border:1px solid rgba(244,162,30,.34);border-radius:14px;padding:15px 17px}
+.urg svg{width:24px;height:24px;flex:none;margin-top:1px}
+.urg p{margin:0;font-family:'Barlow';font-weight:600;font-size:14.5px;color:#EFE3D0;line-height:1.5}
+.urg b{color:#fff;font-weight:800}
+
+
+/* ===================== COMPONENTES DA REFORMULAÇÃO ===================== */
+/* selo de "resposta direta" no topo das seções de dúvida */
+.qlabel{display:inline-flex;align-items:center;gap:8px;font-family:'Barlow';font-weight:800;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--leaf);background:var(--leaf-soft);border:1px solid #CFE3CC;padding:6px 13px;border-radius:999px;margin-bottom:14px}
+.qlabel svg{width:15px;height:15px;flex:none}
+
+/* acesso: 3 cartões */
+.access{display:grid;gap:16px;margin-top:32px}
+@media(min-width:760px){.access{grid-template-columns:repeat(3,1fr)}}
+.acc{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 22px;text-align:left}
+.acc .ic{width:48px;height:48px;border-radius:13px;background:var(--ink);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.acc .ic svg{width:26px;height:26px}
+.acc h3{font-family:'Barlow';font-weight:800;font-size:18px;color:var(--ink);margin-bottom:6px}
+.acc p{font-size:15.5px;line-height:1.5}
+.acc p b{color:var(--ink);font-weight:900}
+
+/* composições / variedade */
+.compo{display:grid;gap:16px;margin-top:32px}
+@media(min-width:680px){.compo{grid-template-columns:1fr 1fr}}
+.cbox{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;border-top:5px solid var(--gold)}
+.cbox .ch{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:13px}
+.cbox h3{font-family:'Barlow';font-weight:800;font-size:16.5px;text-transform:uppercase;letter-spacing:.02em;color:var(--ink)}
+.cbox .cn{font-family:'Anton';font-size:23px;color:var(--gold2);line-height:1;white-space:nowrap}
+.pills{display:flex;flex-wrap:wrap;gap:7px}
+.pill{font-family:'Barlow';font-weight:700;font-size:12.5px;color:var(--ink2);background:var(--paper2);border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+.compo-note{text-align:center;font-family:'Barlow';font-weight:700;color:var(--ink-soft);font-size:14px;margin-top:24px}
+
+/* não é marmita: dois lados */
+.vs2{display:grid;gap:16px;margin-top:30px}
+@media(min-width:760px){.vs2{grid-template-columns:1fr 1fr}}
+.vs2 .card{border-radius:16px;padding:24px}
+.vs2 .no{background:#fff;border:2px solid var(--line)}
+.vs2 .yes{background:#fff;border:2px solid var(--leaf)}
+.vs2 .card h3{font-family:'Barlow';font-weight:800;font-size:16.5px;text-transform:uppercase;letter-spacing:.02em;margin-bottom:12px;display:flex;align-items:center;gap:9px}
+.vs2 .card h3 svg{width:22px;height:22px;flex:none}
+.vs2 .no h3{color:var(--ink-soft)}.vs2 .yes h3{color:var(--leaf)}
+.vs2 .card p{font-size:16px;line-height:1.55}
+.vs2 .card p+p{margin-top:10px}
+.vs2 .card b{color:var(--ink);font-weight:900}
+
+/* liberdade de ritmo: 3 opções */
+.rhythm{display:grid;gap:14px;margin-top:26px}
+@media(min-width:760px){.rhythm{grid-template-columns:repeat(3,1fr)}}
+.rt-card{background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:20px 18px}
+.rt-card .tg{font-family:'Barlow';font-weight:800;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold2);margin-bottom:6px}
+.rt-card h4{font-family:'Barlow';font-weight:800;font-size:16px;color:var(--ink);margin-bottom:5px}
+.rt-card p{font-size:14.5px;line-height:1.5}
+
+/* o que o método ensina: lista em duas colunas */
+.teach{margin-top:30px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 24px}
+.teach ul{list-style:none;display:grid;gap:14px}
+@media(min-width:680px){.teach ul{grid-template-columns:1fr 1fr;gap:14px 26px}}
+.teach li{display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:1.45}
+.teach li b{color:var(--ink);font-weight:900}
+.teach li span.tk{display:block;font-size:14.5px;color:var(--ink-soft);font-weight:400;margin-top:1px}
+.teach .ck{flex:none;width:28px;height:28px;border-radius:9px;background:var(--leaf-soft);border:1px solid #CFE3CC;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.teach .ck svg{width:16px;height:16px}
+
+/* recibo de valor (ancoragem por entregável) */
+.receipt{max-width:520px;margin:32px auto 0;background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;text-align:left;box-shadow:0 22px 46px rgba(36,28,20,.16)}
+.receipt h3{font-family:'Barlow';font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);text-align:center;margin-bottom:16px}
+.receipt .ri{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:15px;line-height:1.35}
+.receipt .ri span:first-child{color:var(--ink2)}
+.receipt .ri b{color:var(--ink);font-weight:800;white-space:nowrap}
+.receipt .rt{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding-top:17px;margin-top:2px}
+.receipt .rt .lab{font-family:'Barlow';font-weight:800;font-size:13.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink)}
+.receipt .rt .val{font-family:'Anton';font-size:34px;color:var(--leaf);line-height:1}
+.perbreak{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:580px;margin:24px auto 0}
+.perbreak .pb{flex:1 1 150px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);border-radius:14px;padding:16px 12px;text-align:center}
+.perbreak .pb .v{font-family:'Anton';font-size:clamp(26px,5vw,34px);color:var(--gold);line-height:1}
+.perbreak .pb .l{font-family:'Barlow';font-weight:600;font-size:12.5px;color:#C9BCA9;margin-top:6px;line-height:1.25}
+
+/* vitalício */
+.lifetime{max-width:720px;margin:0 auto;background:var(--ink);color:#F1E8DA;border-radius:18px;padding:30px 28px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.lifetime .inf{flex:none;width:92px;height:92px;border-radius:50%;background:rgba(244,162,30,.13);border:3px solid var(--gold);display:flex;align-items:center;justify-content:center}
+.lifetime .inf svg{width:46px;height:46px}
+.lifetime .lt{flex:1;min-width:240px}
+.lifetime h3{font-family:'Barlow';font-weight:800;font-size:20px;color:#fff;text-transform:uppercase;letter-spacing:.02em;margin-bottom:8px}
+.lifetime p{font-size:16px;line-height:1.55;color:#E0D5C5}
+.lifetime b{color:var(--gold)}
+
+/* imagem única centralizada de apoio */
+.single-shot{max-width:560px}
+
+/* seção DIMENSÃO (logo após o hero) */
+.dim-sec{padding:60px 0}
+.dim-grid{display:grid;gap:32px;align-items:center}
+@media(min-width:920px){.dim-grid{grid-template-columns:.9fr 1.1fr;column-gap:50px}}
+.dim-txt{min-width:0}
+.dim-num{font-family:'Anton';color:var(--gold);font-size:clamp(88px,19vw,164px);line-height:.82;letter-spacing:-.01em;margin-top:16px}
+.dim-num small{display:block;font-family:'Barlow';font-weight:800;font-size:clamp(13px,2.2vw,17px);letter-spacing:.09em;text-transform:uppercase;color:#EDE4D6;margin-top:12px;line-height:1.25}
+.dim-parts{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.dim-part{font-family:'Barlow';font-weight:600;font-size:13.5px;color:#E0D5C5;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:7px 13px;transition:transform .2s ease,border-color .2s ease}
+.dim-part:hover{transform:translateY(-3px);border-color:rgba(244,162,30,.5)}
+.dim-part b{font-family:'Anton';font-weight:400;color:var(--gold);font-size:16px;margin-right:5px}
+.dim-art{position:relative}
+.dim-art img{width:100%;filter:drop-shadow(0 30px 52px rgba(0,0,0,.55))}
+@media(max-width:919px){.dim-art{max-width:560px;margin:6px auto 0}.dim-num{margin-top:10px}}
+
+/* mockup de dispositivo (PNG recortado, sem moldura) */
+.device-shot{max-width:300px;margin:38px auto 6px}
+.device-shot img{width:100%;filter:drop-shadow(0 24px 42px rgba(36,28,20,.30))}
+.device-cap{text-align:center;font-family:'Barlow';font-weight:700;color:var(--ink-soft);font-size:14px;margin-top:14px}
+
 </style>
 </head>
 <body>
+<style>
+/* ---- reformulação v2: emoção + integração de imagem ---- */
+.hero-art.mock{background:transparent}
+.hero-art.mock img{aspect-ratio:4/5;object-fit:contain;border:0;border-radius:0;box-shadow:none;filter:drop-shadow(0 20px 40px rgba(0,0,0,.5))}
+.dim-art img,.device-shot img{aspect-ratio:4/5;object-fit:cover}
+.receipt .ri .q{color:var(--gold);font-weight:900;font-style:normal}
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
-  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6l7-3z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3L5 13h6l-1 8 8-10h-6l1-8z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
-  <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M3 10h18" stroke="currentColor" stroke-width="2.2"/></symbol>
-  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M8 11V8a4 4 0 018 0v3" fill="none" stroke="currentColor" stroke-width="2.2"/></symbol>
-  <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M12 7.5v5.5M12 16.5v.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
-</svg>
+/* cena emocional (agitação) */
+.scene{max-width:680px;margin:0 auto;text-align:center}
+.scene p{font-size:clamp(18px,2.6vw,21px);line-height:1.7;color:#E7DCCB;margin:0 0 18px}
+.scene p:last-child{margin-bottom:0}
+.scene .bigline{font-family:'Anton';font-weight:400;text-transform:uppercase;font-size:clamp(26px,5.4vw,42px);color:#fff;line-height:1.06;letter-spacing:.01em;margin:0 0 24px}
+.scene .turn{color:var(--gold);font-weight:900}
+.scene strong{color:#fff}
 
-<div class="top">Acesso imediato • <span>Pagamento único</span> • Garantia de 7 dias</div>
+/* o virar de chave (sonho) */
+.flip{max-width:680px;margin:0 auto;text-align:center}
+.flip p{font-size:clamp(18px,2.6vw,21px);line-height:1.7;color:var(--ink2);margin:0 0 16px}
+.flip .quote-line{font-family:'Anton';font-weight:400;text-transform:uppercase;font-size:clamp(24px,5vw,38px);color:var(--leaf);line-height:1.08;margin:10px 0 16px}
 
-<!-- ================= 1. HERO ================= -->
-<header class="hero" id="topo">
-  <div class="w grid">
-    <div>
-      <span class="kick red">Cardápio do mês + lista de compras + 440 receitas</span>
-      <h1>O mês inteiro de comida <em>resolvido.</em> <span class="mark">Com a lista de compras pronta.</span></h1>
-      <p class="lead">Chega de travar às 19h sem saber o que fazer. Você abre o cardápio do dia, vai ao mercado com a lista da semana e cozinha receitas testadas que dão certo de primeira.</p>
-      <div class="price-line"><span>De <s>R$367</s> por</span> <b>R$129,90</b> <span>ou 12x de R$13,20 · pagamento único</span></div>
-      <div class="btn-wrap">
-        <a class="btn" href="https://pay.hub.la/ZFxwTnNsliEvdmmJow2h">
-          <span class="t">Quero meu mês resolvido<small>Acesso na hora no seu e-mail</small></span>
-          <svg width="26" height="26"><use href="#i-arrow"/></svg>
-        </a>
-        <div class="trust">
-          <span><svg width="18" height="18"><use href="#i-shield"/></svg>Garantia de 7 dias</span>
-          <span><svg width="18" height="18"><use href="#i-card"/></svg>Pix ou 12x no cartão</span>
-          <span><svg width="18" height="18"><use href="#i-bolt"/></svg>Sem mensalidade</span>
+/* mecanismo: duas colunas de valor */
+.why{display:grid;gap:16px;margin-top:34px}
+@media(min-width:760px){.why{grid-template-columns:1fr 1fr}}
+.why .w{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:26px 24px;border-top:5px solid var(--gold)}
+.why .w .tg{font-family:'Barlow';font-weight:800;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.why .w h3{font-family:'Barlow';font-weight:800;font-size:20px;color:#fff;margin-bottom:8px}
+.why .w p{font-size:16px;line-height:1.55;color:#E0D5C5}
+.why .w b{color:#fff}
+
+/* OS 10 MOMENTOS (imagem + copy emocional integrados) */
+.moments{display:grid;gap:20px;margin-top:36px}
+@media(min-width:720px){.moments{grid-template-columns:1fr 1fr}}
+.moment{margin:0;background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 16px 34px rgba(36,28,20,.13);transition:transform .22s ease,box-shadow .22s ease}
+.moment:hover{transform:translateY(-7px);box-shadow:0 28px 52px rgba(36,28,20,.22)}
+.moment>img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+.moment figcaption{padding:22px 22px 24px}
+.moment .mtag{display:inline-block;font-family:'Barlow';font-weight:800;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--gold2);background:#FDEFD7;padding:6px 12px;border-radius:999px;margin-bottom:12px;line-height:1.3}
+.moment h3{font-family:'Barlow';font-weight:800;font-size:21px;color:var(--ink);margin-bottom:9px;display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+.moment h3 em{font-style:normal;font-weight:700;font-size:13px;color:var(--ink-soft);letter-spacing:.02em}
+.moment p{font-size:15.5px;line-height:1.58;color:var(--ink2)}
+.moment p b{color:var(--ink);font-weight:900}
+
+/* faixa "impressão" (tangibiliza + emoção) */
+.print-hl{display:flex;gap:16px;align-items:center;max-width:720px;margin:34px auto 0;background:var(--ink);color:#F1E8DA;border-radius:18px;padding:24px 26px}
+.print-hl .pic{flex:none;width:56px;height:56px;border-radius:14px;background:rgba(244,162,30,.14);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center}
+.print-hl .pic svg{width:28px;height:28px}
+.print-hl p{margin:0;font-size:16px;line-height:1.55}
+.print-hl b{color:var(--gold)}
+
+/* equação (mantida) */
+.eq{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;max-width:760px;margin:8px auto 0}
+.eq .e{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:18px 22px;text-align:center;min-width:150px;flex:1 1 150px}
+.eq .e .n{font-family:'Anton';font-size:clamp(34px,7vw,52px);color:var(--gold);line-height:1}
+.eq .e .l{font-family:'Barlow';font-weight:700;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:#D8CCBB;margin-top:6px;line-height:1.25}
+.eq .op{font-family:'Anton';font-size:clamp(28px,6vw,42px);color:#EDE4D6;flex:0 0 auto}
+.eq .e.total{background:rgba(244,162,30,.14);border-color:rgba(244,162,30,.55)}
+.eq .e.total .n{color:#fff}
+.bonus-note{text-align:center;font-family:'Barlow';font-weight:700;color:#C9BCA9;font-size:14px;margin-top:22px}
+.receipt .ri.bo span:first-child::before{content:"★ ";color:var(--gold2)}
+</style>
+
+<!-- ===================== NAV ===================== -->
+<nav class="nav">
+  <div class="wrap">
+    <div class="brand">Rango do Mês<small>Comer bem gastando pouco</small></div>
+    <a href="#oferta" class="btn nav-cta-hide">Quero acessar</a>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-head">
+        <span class="eyebrow">O plano do mês + 10 coleções para os momentos que importam</span>
+        <h1>Da correria de terça ao <span class="y">almoço de domingo</span> que reúne todo mundo</h1>
+      </div>
+      <div class="hero-art mock">
+        <img fetchpriority="high" src="images/area-membros.webp" alt="O Rango do Mês aberto, com o plano do mês e as 10 coleções de receitas">
+        <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.3-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.7-7 10-7 10Z" stroke="#D8412F" stroke-width="2.1" stroke-linejoin="round"/></svg>Comida que vira memória</div>
+      </div>
+      <div class="hero-body">
+        <p class="hero-sub">Não é sobre ter centenas de receitas guardadas. É sobre <strong>nunca mais travar às seis da tarde</strong>. Sobre a sobremesa que faz seu filho sorrir, o churrasco que vira história, o jantar que aproxima. O Rango do Mês entrega o mês inteiro já resolvido — <strong>e as receitas dos momentos que você vai querer guardar pra sempre</strong>.</p>
+        <div class="hero-cta">
+          <a href="#oferta" class="btn btn-wide btn-arrow">Quero transformar minha cozinha</a>
+          <div class="under-cta">Acesso na hora &nbsp;•&nbsp; para baixar e imprimir &nbsp;•&nbsp; com suporte &nbsp;•&nbsp; seu para sempre</div>
+        </div>
+        <div class="trust-strip">
+          <div><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#F4A21E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>O mês inteiro planejado</div>
+          <div><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#F4A21E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Receitas para cada ocasião</div>
+          <div><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#F4A21E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Suporte + garantia de 7 dias</div>
         </div>
       </div>
-    </div>
-    <div class="hero-visual">
-      <div class="ph"><img src="/images/plano-mes.webp" width="900" height="1125" alt="O cardápio do mês com café da manhã, almoço, lanche e jantar" fetchpriority="high" decoding="async"></div>
-      <div class="tag t1">5 refeições por dia,<br>28 dias</div>
-      <div class="tag t2">Lista pra 1, 2, 3<br>ou 4 pessoas</div>
     </div>
   </div>
 </header>
 
-<!-- ================= 2. DOR ================= -->
-<section class="dor" id="dor">
-  <div class="w narrow">
-    <h2>Se o seu dia termina assim, esta página é pra você:</h2>
-    <div class="pains">
-      <div class="pain"><svg width="24" height="24"><use href="#i-alert"/></svg>São 19h, todo mundo com fome e ninguém sabe o que fazer de janta.</div>
-      <div class="pain"><svg width="24" height="24"><use href="#i-alert"/></svg>O delivery de R$150 virou rotina, e acaba na mesma noite.</div>
-      <div class="pain"><svg width="24" height="24"><use href="#i-alert"/></svg>Você vai ao mercado sem lista, compra por impulso e metade estraga.</div>
-      <div class="pain"><svg width="24" height="24"><use href="#i-alert"/></svg>Sempre as mesmas cinco receitas. A família já enjoou.</div>
+<!-- ===================== A CENA DAS 6 DA TARDE (agitação) ===================== -->
+<section class="dark">
+  <div class="wrap">
+    <div class="narrow center" style="text-align:center;margin-bottom:22px">
+      <span class="eyebrow kick-center" style="color:var(--gold)">Se você já sentiu isso, continue lendo</span>
     </div>
-    <p class="turn">O problema não é falta de receita. <span>É falta de plano.</span></p>
-    <p class="lead">O Rango do Mês te entrega o plano pronto: o que comer em cada refeição do mês, o que comprar em cada semana e como fazer cada prato, passo a passo.</p>
-  </div>
-</section>
-
-<!-- ================= 3. COMO FUNCIONA ================= -->
-<section id="como">
-  <div class="w">
-    <div class="center narrow" style="margin:0 auto">
-      <span class="kick">Como funciona</span>
-      <h2 style="margin-top:14px">3 passos. Zero decisão no susto.</h2>
-    </div>
-    <div class="steps">
-      <div class="step">
-        <div class="ph"><img src="/images/lista-2.webp" width="760" height="760" alt="Página do cardápio da semana com as 35 refeições" loading="lazy" decoding="async"></div>
-        <div class="tx"><span class="n">1</span><h3>Abra o cardápio do dia</h3><p>Café, lanche da manhã, almoço, lanche da tarde e jantar já definidos. Você só segue.</p></div>
-      </div>
-      <div class="step">
-        <div class="ph"><img src="/images/lista-1.webp" width="760" height="760" alt="Lista de compras da semana com quantidades por número de pessoas" loading="lazy" decoding="async"></div>
-        <div class="tx"><span class="n">2</span><h3>Vá ao mercado com a lista</h3><p>Uma lista por semana, com a quantidade exata para a sua casa. Uma ida só, sem desperdício.</p></div>
-      </div>
-      <div class="step">
-        <div class="ph"><img src="/images/livro-forno.webp" width="640" height="640" alt="Páginas de receita com foto, ingredientes e passo a passo" loading="lazy" decoding="async"></div>
-        <div class="tx"><span class="n">3</span><h3>Cozinhe sem errar</h3><p>Ingredientes na medida, passo a passo numerado e uma dica de ouro no final de cada receita.</p></div>
-      </div>
+    <div class="scene">
+      <p class="bigline">São seis da tarde.<br>E de novo aquela pergunta<br>sem resposta.</p>
+      <p>A geladeira aberta, o cansaço do dia nas costas, e a mesma dúvida que não dá trégua: <strong>“e agora, o que eu faço pra comer?”</strong></p>
+      <p>Você já sabe como termina. O aplicativo de entrega mais uma vez. A comida sem graça. O dinheiro escorrendo. E aquela culpinha de não estar cuidando de você — e de quem você ama — do jeito que gostaria.</p>
+      <p>Não é preguiça. Não é falta de amor. É o <strong>cansaço mental de decidir tudo, todo dia, sozinha</strong>.</p>
+      <p><span class="turn">O problema nunca foi você. Foi nunca ter tido um plano.</span></p>
     </div>
   </div>
 </section>
 
-<!-- ================= 4. O CARDÁPIO DO MÊS ================= -->
-<section class="cardapio" id="cardapio">
-  <div class="w two">
-    <div>
-      <span class="kick red">A parte que ninguém te dá</span>
-      <h2 style="margin-top:14px">O mês inteiro já planejado, refeição por refeição.</h2>
-      <p class="lead">Não é uma pilha de receitas pra você se virar. É um cardápio completo de 28 dias, pronto pra seguir.</p>
-      <div class="meals">
-        <div class="meal"><span class="q">28</span><div><b>Cafés da manhã</b>pra começar o dia sem repetir sempre a mesma coisa</div></div>
-        <div class="meal"><span class="q">28</span><div><b>Lanches da manhã</b>o que comer entre o café e o almoço</div></div>
-        <div class="meal"><span class="q">28</span><div><b>Almoços</b>comida de verdade, do tipo que sustenta</div></div>
-        <div class="meal"><span class="q">28</span><div><b>Lanches da tarde</b>pra não chegar no jantar morrendo de fome</div></div>
-        <div class="meal"><span class="q">28</span><div><b>Jantares</b>leves, gostosos e rápidos no fim do dia</div></div>
-      </div>
-      <p class="big-note">140 receitas, e nenhum prato principal se repete no mês inteiro.</p>
+<!-- ===================== O VIRAR DE CHAVE (sonho) ===================== -->
+<section>
+  <div class="wrap">
+    <div class="narrow center" style="text-align:center;margin-bottom:22px">
+      <span class="qlabel"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.6 5.6l1.4 1.4m10 10 1.4 1.4m0-12.8-1.4 1.4m-10 10-1.4 1.4" stroke="#2F7D32" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="4" stroke="#2F7D32" stroke-width="1.8"/></svg>Agora imagine o contrário</span>
     </div>
-    <div>
-      <div class="lists">
-        <img src="/images/lista-1.webp" width="760" height="760" alt="Lista de compras da semana 1" loading="lazy" decoding="async">
-        <img src="/images/lista-2.webp" width="760" height="760" alt="Lista de compras da semana 2" loading="lazy" decoding="async">
-        <img src="/images/lista-3.webp" width="760" height="760" alt="Lista de compras da semana 3" loading="lazy" decoding="async">
-        <img src="/images/lista-4.webp" width="760" height="760" alt="Lista de compras da semana 4" loading="lazy" decoding="async">
-      </div>
-      <h3 style="margin-top:28px;font-size:28px">E a lista de compras de cada semana já vem fechada.</h3>
-      <ul class="checks">
-        <li><svg width="24" height="24"><use href="#i-check"/></svg><span><b>Quantidade para 1, 2, 3 ou 4 pessoas.</b> Escolha a coluna da sua casa e leve só o que precisa.</span></li>
-        <li><svg width="24" height="24"><use href="#i-check"/></svg><span><b>Uma ida ao mercado por semana.</b> Com a lista na mão, acabou a compra por impulso.</span></li>
-        <li><svg width="24" height="24"><use href="#i-check"/></svg><span><b>Nada estragando na geladeira.</b> A quantidade é calculada para o que o cardápio pede.</span></li>
-      </ul>
-      <div class="food-note">
-        <h3>Comida gostosa e barata. Não é dieta.</h3>
-        <p>Arroz, feijão, ovo, frango, carne moída, legumes e frutas da estação. Coisa de mercado e feira, que a sua família já gosta de comer e que cabe no orçamento.</p>
-      </div>
-    </div>
-  </div>
-  <div class="w">
-    <div class="btn-wrap">
-      <a class="btn" href="#comprar"><span class="t">Quero o cardápio + as listas</span><svg width="26" height="26"><use href="#i-arrow"/></svg></a>
+    <div class="flip">
+      <p>Você abre o cardápio e <strong>já está tudo lá</strong> — o que comprar, o que fazer, o passo a passo. Sem pensar, sem culpa, sem estresse.</p>
+      <p>A cozinha cheira bem. A mesa se enche. Alguém dá a primeira garfada, fecha os olhos e diz:</p>
+      <p class="quote-line">“Nossa… que delícia. Quem fez isso?”</p>
+      <p>E pela primeira vez em muito tempo, comer bem deixou de ser <strong>mais uma tarefa</strong> — e virou o <strong>melhor momento do seu dia</strong>.</p>
     </div>
   </div>
 </section>
 
-<!-- ================= 5. NÃO É MARMITA ================= -->
-<section id="ritmo">
-  <div class="w">
+<!-- ===================== O MECANISMO ===================== -->
+<section class="dark">
+  <div class="wrap narrow center" style="text-align:center">
+    <span class="eyebrow kick-center" style="color:var(--gold)">Por que funciona onde as outras receitas falham</span>
+    <h2 style="font-size:clamp(30px,7vw,50px)">Ninguém junta<br>as duas coisas. <span style="color:var(--gold)">Nós juntamos.</span></h2>
+    <div class="h-band" style="margin-left:auto;margin-right:auto"></div>
+    <p class="lead" style="color:#DDD1C0;max-width:640px;margin:0 auto">A internet está cheia de receita solta e planilha de organização. Isso você já tem — e continua travando. O que muda tudo é resolver o <strong>dia a dia</strong> e os <strong>momentos especiais</strong> no mesmo lugar.</p>
+  </div>
+  <div class="wrap">
+    <div class="why">
+      <div class="w">
+        <div class="tg">Para o seu dia a dia</div>
+        <h3>O mês no piloto automático</h3>
+        <p><b>140 receitas em 4 semanas</b>, sem repetir prato, com a lista de compras já pronta. O peso das seis da tarde, eliminado — porque a decisão já foi tomada por você.</p>
+      </div>
+      <div class="w">
+        <div class="tg">Para os momentos que importam</div>
+        <h3>A receita certa na hora certa</h3>
+        <p><b>10 coleções com 300 receitas</b> para cada ocasião. A vida acontece à mesa — e agora você tem exatamente o que fazer para cada uma delas, do jantar rápido ao domingo em família.</p>
+      </div>
+    </div>
+    <div class="eq" style="margin-top:26px">
+      <div class="e"><div class="n">140</div><div class="l">Do dia a dia</div></div>
+      <div class="op">+</div>
+      <div class="e"><div class="n">300</div><div class="l">Dos momentos</div></div>
+      <div class="op">=</div>
+      <div class="e total"><div class="n">440</div><div class="l">Receitas nas suas mãos</div></div>
+    </div>
+    <p class="bonus-note">Tudo junto, organizado e para sempre — do café de segunda ao brinde de sexta.</p>
+  </div>
+</section>
+
+<!-- ===================== O PLANO (as 140) ===================== -->
+<section class="dark dim-sec">
+  <div class="wrap">
+    <div class="dim-grid">
+      <div class="dim-txt">
+        <span class="eyebrow" style="color:var(--gold)">O seu dia a dia, resolvido</span>
+        <div class="dim-num">140<small>refeições do mês, todas diferentes</small></div>
+        <p style="color:#E0D5C5;max-width:520px;margin:20px 0 0;font-size:clamp(16px,2.4vw,18px)">Você chega em casa e <strong style="color:#fff">já sabe</strong>. Sem abrir a geladeira sem rumo, sem pedir de novo, sem a culpa de sempre. Quatro semanas de cardápio, cinco refeições por dia, e nenhum prato principal repetido no mês:</p>
+        <div class="dim-parts">
+          <span class="dim-part"><b>28</b>cafés da manhã</span>
+          <span class="dim-part"><b>28</b>lanches da manhã</span>
+          <span class="dim-part"><b>28</b>almoços</span>
+          <span class="dim-part"><b>28</b>lanches da tarde</span>
+          <span class="dim-part"><b>28</b>jantares</span>
+        </div>
+        <p style="color:#C9BCA9;max-width:520px;margin:20px 0 0;font-size:14.5px">Com a lista de compras já fechada para 1, 2, 3 ou 4 pessoas. Você faz uma ida ao mercado e a semana inteira está resolvida.</p>
+        <div style="margin-top:26px"><a href="#oferta" class="btn btn-arrow">Quero minha paz de volta</a></div>
+      </div>
+      <div class="dim-art">
+        <img loading="lazy" src="images/plano-mes.webp" alt="As 4 semanas de cardápio do plano do mês">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== O QUE O MÉTODO TE ENSINA ===================== -->
+<section class="sec-paper2">
+  <div class="wrap">
     <div class="narrow">
-      <span class="kick">"Isso é marmita congelada?"</span>
-      <h2 style="margin-top:14px">Não. Você cozinha as bases e monta o prato fresco na hora.</h2>
-      <p class="lead">Arroz, feijão, uma proteína e um molho viram pratos diferentes a cada dia. Você varia sem cozinhar do zero toda hora, e no ritmo que couber na sua vida:</p>
+      <span class="qlabel"><svg viewBox="0 0 24 24" fill="none"><path d="M3 7l9-4 9 4-9 4-9-4Z" stroke="#2F7D32" stroke-width="1.9" stroke-linejoin="round"/><path d="M7 9.5V15c0 1.4 2.2 2.5 5 2.5s5-1.1 5-2.5V9.5" stroke="#2F7D32" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>Do mercado à mesa</span>
+      <h2 style="font-size:clamp(28px,6vw,44px)">Não é só receita.<br>É o método inteiro.</h2>
+      <div class="h-band"></div>
+      <p class="lead">O <strong>Guia Geral</strong> ensina tudo o que faz a comida durar, render e sair barata — o que a maioria dos cardápios não te conta:</p>
+    </div>
+    <div class="teach">
+      <ul>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3s5 5 5 9a5 5 0 0 1-10 0c0-4 5-9 5-9Z" stroke="#2F7D32" stroke-width="1.9" stroke-linejoin="round"/></svg></span><div><b>Higienizar os alimentos</b><span class="tk">O passo a passo certo para tirar os micróbios do que vai cru — não é só passar água.</span></div></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="3" width="14" height="18" rx="2" stroke="#2F7D32" stroke-width="1.9"/><path d="M5 9h14M9 3v6" stroke="#2F7D32" stroke-width="1.9"/></svg></span><div><b>Guardar antes de preparar</b><span class="tk">Onde cada alimento vai na geladeira e na despensa para durar o máximo, sem estragar.</span></div></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19" stroke="#2F7D32" stroke-width="1.6" stroke-linecap="round"/></svg></span><div><b>Congelar do jeito certo</b><span class="tk">Porcionar, etiquetar e congelar por até 90 dias — o freezer virando seu cofre.</span></div></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M12 4v9M9 6c-2 1-3 3-3 5a6 6 0 0 0 12 0c0-2-1-4-3-5" stroke="#2F7D32" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Reaquecer com segurança</b><span class="tk">A temperatura certa para esquentar sem risco e sem perder o sabor.</span></div></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3v8a3 3 0 0 0 6 0V3M9 3v18M18 3c-1.7 0-3 2-3 5s1.3 4 3 4v9" stroke="#2F7D32" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Cozinhar em lote</b><span class="tk">Como duas sessões de cozinha por semana produzem a comida de vários dias.</span></div></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 12a9 9 0 0 1-15 6.7L3 16" stroke="#2F7D32" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 4v4h-4M3 20v-4h4" stroke="#2F7D32" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Aproveitar as sobras</b><span class="tk">A sobra de hoje vira um prato novo amanhã — nada se joga fora.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== OS 10 MOMENTOS (a estrela) ===================== -->
+<section>
+  <div class="wrap">
+    <div class="narrow center" style="text-align:center">
+      <span class="qlabel" style="margin-left:auto;margin-right:auto"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.3-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.7-7 10-7 10Z" stroke="#2F7D32" stroke-width="2" stroke-linejoin="round"/></svg>10 coleções · 300 receitas · inclusas</span>
+      <h2 style="font-size:clamp(30px,7vw,50px)">10 coleções para os<br><span style="color:var(--gold2)">momentos da sua vida</span></h2>
+      <div class="h-band" style="margin-left:auto;margin-right:auto"></div>
+      <p class="lead">O plano cuida da rotina. Estas cuidam do que fica na memória. Cada coleção nasceu para um momento diferente — e reúne <strong>as receitas mais amadas da internet</strong>, prontas para quando você precisar delas.</p>
+    </div>
+
+    <div class="moments">
+      <figure class="moment">
+        <img loading="lazy" src="images/bonus-1.webp" alt="Coleção Air Fryer">
+        <figcaption>
+          <span class="mtag">Pras noites que você não aguenta mais</span>
+          <h3>Air Fryer <em>30 receitas</em></h3>
+          <p>Aquele dia que te sugou por inteiro. Você chega, bate o cansaço, e o fogão é a última coisa que quer encarar. Em 15 minutos sai um frango dourado, uma batata crocante — <b>comida de verdade, sem esforço</b>. Você se alimenta bem mesmo nos dias em que só quer deitar.</p>
+        </figcaption>
+      </figure>
+      <figure class="moment">
+        <img loading="lazy" src="images/bonus-3.webp" alt="Coleção Forno">
+        <figcaption>
+          <span class="mtag">Pro domingo que junta todo mundo</span>
+          <h3>Forno <em>30 receitas</em></h3>
+          <p>O cheiro do assado tomando a casa. A família chegando, a mesa enchendo, aquele barulho gostoso de gente reunida. Um frango, uma lasanha, um pão saindo quentinho — <b>dos pratos que fazem todo mundo sentar junto</b> e ninguém querer levantar.</p>
+        </figcaption>
+      </figure>
+      <figure class="moment">
+        <img loading="lazy" src="images/bonus-4.webp" alt="Coleção Frigideira">
+        <figcaption>
+          <span class="mtag">Pra fome que não espera</span>
+          <h3>Frigideira <em>30 receitas</em></h3>
+          <p>Bateu a fome e não dá pra esperar uma hora no fogão. Uma frigideira, poucos ingredientes e, em minutos, um prato quente na mesa — <b>sem uma pia cheia de louça</b> te esperando depois. Rápido de fazer, gostoso de comer, leve de limpar.</p>
+        </figcaption>
+      </figure>
+      <figure class="moment">
+        <img loading="lazy" src="images/bonus-7.webp" alt="Coleção Saladas">
+        <figcaption>
+          <span class="mtag">Pra se cuidar sem sofrer</span>
+          <h3>Saladas <em>30 receitas</em></h3>
+          <p>Você decidiu comer melhor, mas salada na sua cabeça é folha triste sem graça. Aqui não. Da mais simples ao prato completo que mata a fome, colorida e de dar água na boca — <b>se cuidar deixa de ser castigo</b> e vira prazer.</p>
+        </figcaption>
+      </figure>
+      <figure class="moment">
+        <img loading="lazy" src="images/bonus-5.webp" alt="Coleção Lanches">
+        <figcaption>
+          <span class="mtag">Pra sexta virar programa</span>
+          <h3>Lanches <em>30 receitas</em></h3>
+          <p>Sexta à noite, todo mundo em casa, aquela vontade de um lanche que valha a pena. Hambúrguer suculento, misto quentinho, petiscos com gosto dos da rua — <b>do jeito que junta a família no sofá</b> e transforma uma noite qualquer no programa preferido da semana.</p>
+        </figcaption>
+      </figure>
+      <figure class="moment">
+        <img loading="lazy" src="images/bonus-6.webp" alt="Coleção Molhos">
+        <figcaption>
+          <span class="mtag">Pra ouvirem “que sabor é esse?”</span>
+          <h3>Molhos <em>30 receitas</em></h3>
+          <p>O mesmo arroz, a mesma carne, o mesmo macarrão — mas com um molho que muda tudo. É o detalhe que faz alguém parar no meio da garfada e <b>perguntar quem foi que fez</b>. O segredo de quem transforma o simples em inesquecível.</p>
+        </figcaption>
+      </figure>
+      <figure class="moment">
+        <img loading="lazy" src="images/bonus-2.webp" alt="Coleção Churrasco">
+        <figcaption>
+          <span class="mtag">Pro dia que você é o anfitrião</span>
+          <h3>Churrasco <em>30 receitas</em></h3>
+          <p>Os amigos chegando, a brasa acesa, você no comando. O ponto certo da picanha, os acompanhamentos, a farofa que some primeiro. Aquele <b>orgulho quando todo mundo elogia</b> — e você sabe que a tarde vai virar história pra contar.</p>
+        </figcaption>
+      </figure>
+      <figure class="moment">
+        <img loading="lazy" src="images/bonus-8.webp" alt="Coleção Sobremesas">
+        <figcaption>
+          <span class="mtag">Pro sorriso que não tem preço</span>
+          <h3>Sobremesas <em>30 receitas</em></h3>
+          <p>“Mãe, tem doce?” — e você tem. O pudim que a vovó fazia, o brigadeiro de colher, o bolo que faz os olhos da criançada brilharem. As sobremesas que transformam um dia comum na <b>lembrança boa que eles vão carregar pra vida</b>.</p>
+        </figcaption>
+      </figure>
+      <figure class="moment">
+        <img loading="lazy" src="images/bonus-9.webp" alt="Coleção Sucos">
+        <figcaption>
+          <span class="mtag">Pro recomeço de cada manhã</span>
+          <h3>Sucos <em>30 receitas</em></h3>
+          <p>Aquela vontade de recomeçar, de se cuidar, de acordar com mais disposição. Um suco verde pra desintoxicar, um funcional pra imunidade, um natural pra energia. <b>O copo que começa o seu dia com o pé direito</b>.</p>
+        </figcaption>
+      </figure>
+      <figure class="moment">
+        <img loading="lazy" src="images/bonus-10.webp" alt="Coleção Drinks">
+        <figcaption>
+          <span class="mtag">Pra brindar as pequenas vitórias</span>
+          <h3>Drinks <em>30 receitas</em></h3>
+          <p>Nem toda comemoração precisa de motivo grande. Uma caipirinha caprichada, um drink sem álcool pra todo mundo participar, aquele brinde numa sexta qualquer. Porque <b>a vida também se celebra em casa</b>, com quem a gente ama.</p>
+        </figcaption>
+      </figure>
+    </div>
+    <p class="dish-note">As 10 coleções já entram no seu acesso hoje — sem pagar nada a mais por elas.</p>
+    <div style="margin-top:26px;text-align:center"><a href="#oferta" class="btn btn-wide btn-arrow">Quero as receitas de cada momento</a></div>
+  </div>
+</section>
+
+<!-- ===================== NÃO É MARMITA (objeção) ===================== -->
+<section class="sec-paper2">
+  <div class="wrap">
+    <div class="narrow">
+      <span class="qlabel"><svg viewBox="0 0 24 24" fill="none"><path d="M4 10h16M6 10l1 9a2 2 0 0 0 2 1.8h6a2 2 0 0 0 2-1.8l1-9M9 10V7a3 3 0 0 1 6 0v3" stroke="#2F7D32" stroke-width="1.9" stroke-linejoin="round"/></svg>Antes que você pergunte</span>
+      <h2 style="font-size:clamp(28px,6vw,44px)">“Isso não é marmita<br>congelada, é?”</h2>
+      <div class="h-band"></div>
+      <p class="lead"><strong>Não.</strong> Nada de descongelar a mesma coisa cinco dias até enjoar. Você cozinha as <strong>bases</strong> em lote e monta o prato <strong>fresco</strong> na hora — as mesmas bases viram pratos diferentes a cada dia. Comida quentinha, variada, feita na sua cozinha.</p>
     </div>
     <div class="rhythm">
-      <div><b>Adianta tudo</b><p>Duas sessões de cozinha na semana. No resto dos dias é só montar e esquentar em minutos.</p></div>
-      <div><b>Faz na hora</b><p>Prefere cozinhar no dia? As receitas são rápidas e completas pra fazer cada refeição fresca.</p></div>
-      <div><b>Meio-termo</b><p>Deixa as bases prontas e faz alguns pratos na hora. Você escolhe.</p></div>
+      <div class="rt-card"><div class="tg">No seu ritmo · 1</div><h4>Adianta tudo</h4><p>Duas sessões de cozinha na semana e o resto dos dias é só montar e esquentar em minutos.</p></div>
+      <div class="rt-card"><div class="tg">No seu ritmo · 2</div><h4>Faz na hora</h4><p>Prefere cozinhar no dia? As receitas são rápidas e vêm completas para preparar cada refeição fresca.</p></div>
+      <div class="rt-card"><div class="tg">No seu ritmo · 3</div><h4>Um meio-termo</h4><p>Deixa as bases prontas e faz alguns pratos na hora. Funciona do jeito que couber na sua vida.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ================= 6. 10 COLEÇÕES ================= -->
-<section class="colecoes" id="colecoes">
-  <div class="w">
-    <div class="center narrow" style="margin:0 auto">
-      <span class="kick" style="background:var(--yellow);color:var(--ink)">E ainda: 10 coleções · 300 receitas</span>
-      <h2 style="margin-top:14px">Uma receita pronta pra cada momento da vida.</h2>
-      <p class="lead">O cardápio cuida do dia a dia. As coleções cuidam do resto: a terça corrida, o domingo em família, a sexta à noite.</p>
+<!-- ===================== COMO VOCÊ USA + IMPRESSÃO + SUPORTE ===================== -->
+<section>
+  <div class="wrap">
+    <div class="narrow">
+      <span class="qlabel"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l8 4v5c0 4.5-3.4 7.3-8 8-4.6-.7-8-3.5-8-8V7l8-4Z" stroke="#2F7D32" stroke-width="2" stroke-linejoin="round"/></svg>Simples de usar, do seu jeito</span>
+      <h2 style="font-size:clamp(28px,6vw,44px)">Seu, na hora — e com<br>gente pra te ajudar</h2>
+      <div class="h-band"></div>
+      <p class="lead">Pagou, entrou. Tudo numa área de membros organizada, com o plano e as 10 coleções à mão. E você usa como preferir:</p>
     </div>
-    <div class="cols">
-      <div class="col"><img src="/images/bonus-1.webp" width="560" height="700" alt="Receitas de air fryer" loading="lazy" decoding="async"><div class="cx"><b>Air Fryer</b><span>"Cheguei 20h, morta." Comida de verdade em 15 minutos.</span></div></div>
-      <div class="col"><img src="/images/bonus-3.webp" width="560" height="700" alt="Receitas de forno" loading="lazy" decoding="async"><div class="cx"><b>Forno</b><span>O almoço de domingo que faz todo mundo sentar junto.</span></div></div>
-      <div class="col"><img src="/images/bonus-4.webp" width="560" height="700" alt="Receitas de frigideira" loading="lazy" decoding="async"><div class="cx"><b>Frigideira</b><span>Refeição numa panela só, rápida e fácil de lavar.</span></div></div>
-      <div class="col"><img src="/images/bonus-7.webp" width="560" height="700" alt="Receitas de saladas" loading="lazy" decoding="async"><div class="cx"><b>Saladas</b><span>Pratos completos que matam a fome de verdade.</span></div></div>
-      <div class="col"><img src="/images/bonus-5.webp" width="560" height="700" alt="Receitas de lanches" loading="lazy" decoding="async"><div class="cx"><b>Lanches</b><span>Com gosto dos da rua, mas feito em casa.</span></div></div>
-      <div class="col"><img src="/images/bonus-6.webp" width="560" height="700" alt="Receitas de molhos" loading="lazy" decoding="async"><div class="cx"><b>Molhos</b><span>O detalhe que transforma o simples em inesquecível.</span></div></div>
-      <div class="col"><img src="/images/bonus-2.webp" width="560" height="700" alt="Receitas de churrasco" loading="lazy" decoding="async"><div class="cx"><b>Churrasco</b><span>Picanha no ponto e todo mundo elogiando.</span></div></div>
-      <div class="col"><img src="/images/bonus-8.webp" width="560" height="700" alt="Receitas de sobremesas" loading="lazy" decoding="async"><div class="cx"><b>Sobremesas</b><span>"Mãe, tem doce?" Pudim, brigadeiro, petit gâteau.</span></div></div>
-      <div class="col"><img src="/images/bonus-9.webp" width="560" height="700" alt="Receitas de sucos" loading="lazy" decoding="async"><div class="cx"><b>Sucos</b><span>O copo que começa o dia com o pé direito.</span></div></div>
-      <div class="col"><img src="/images/bonus-10.webp" width="560" height="700" alt="Receitas de drinks" loading="lazy" decoding="async"><div class="cx"><b>Drinks</b><span>Com e sem álcool, pra celebrar em casa.</span></div></div>
+    <div class="access">
+      <div class="acc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v11m0 0 4-4m-4 4-4-4" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 19h14" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/></svg></div>
+        <h3>Leia, baixe e leve junto</h3>
+        <p>Abra onde você estiver e <b>baixe no seu aparelho</b> para usar até sem internet. Onde e quando a vontade de cozinhar bater.</p>
+      </div>
+      <div class="acc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M7 8V4h10v4M7 18H5a1 1 0 0 1-1-1v-5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a1 1 0 0 1-1 1h-2M7 14h10v6H7v-6Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+        <h3>Imprima e cole na geladeira</h3>
+        <p>Gosta de cozinhar com a receita na bancada? <b>Imprima à vontade.</b> Com o tempo, aquela folha manchada de molho vira parte da casa — a receita que a família já sabe de cor.</p>
+      </div>
+      <div class="acc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3a4 4 0 0 1 4 4v1a4 4 0 0 1-8 0V7a4 4 0 0 1 4-4Z" stroke="#fff" stroke-width="1.9"/><path d="M5 20c.6-3.2 3.4-5 7-5s6.4 1.8 7 5" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/></svg></div>
+        <h3>Suporte quando precisar</h3>
+        <p>Empacou em alguma coisa? Você tem <b>suporte dentro da área de membros</b>. Nunca fica sozinha — é só chamar que a gente te ajuda.</p>
+      </div>
     </div>
-    <p class="swipe">Arraste pro lado pra ver as 10 coleções →</p>
-    <div class="dishes" aria-label="Exemplos de receitas">
-      <span>Frango crocante na air fryer</span><span>Lasanha à bolonhesa</span><span>Picanha no ponto</span><span>Pudim de leite</span><span>Hambúrguer artesanal</span><span>Escondidinho de carne</span><span>Petit gâteau</span><span>Strogonoff rápido</span><span>Caipirinha</span><span>Bolo de cenoura</span><span>…e mais 430</span>
+    <div class="print-hl">
+      <div class="pic"><svg viewBox="0 0 24 24" fill="none"><path d="M7 8V4h10v4M6.5 18H5a1 1 0 0 1-1-1v-5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a1 1 0 0 1-1 1h-1.5M7 14h10v6H7v-6Z" stroke="#F4A21E" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+      <p><b>Muita gente ama imprimir</b> — e por um bom motivo. A receita na mão, do lado do fogão, vira ritual. E o material foi feito para isso: limpo, claro e pronto para virar aquela pasta de receitas que passa de mão em mão.</p>
     </div>
+    <figure class="device-shot" style="max-width:340px;margin-top:36px"><img loading="lazy" src="images/area-1.webp" alt="A área de membros do Rango do Mês, com o plano e as coleções"></figure>
+    <p class="device-cap">O plano e as 10 coleções, tudo num lugar só, sempre à mão.</p>
   </div>
 </section>
 
-<!-- ================= 7. POR DENTRO ================= -->
-<section id="dentro">
-  <div class="w two">
-    <div class="inside-ph"><img src="/images/livro-aberto.webp" width="900" height="900" alt="Material por dentro, com páginas de receita" loading="lazy" decoding="async"></div>
-    <div>
-      <span class="kick">Por dentro do material</span>
-      <h2 style="margin-top:14px">Feito pra dar certo, mesmo se você acha que não sabe cozinhar.</h2>
-      <ul class="checks">
-        <li><svg width="24" height="24"><use href="#i-check"/></svg><span><b>Ingredientes na medida certa.</b> Nada de "a gosto" que ninguém sabe quanto é.</span></li>
-        <li><svg width="24" height="24"><use href="#i-check"/></svg><span><b>Passo a passo numerado,</b> simples de seguir do começo ao fim.</span></li>
-        <li><svg width="24" height="24"><use href="#i-check"/></svg><span><b>Tempo, rendimento e modo de preparo</b> logo no topo.</span></li>
-        <li><svg width="24" height="24"><use href="#i-check"/></svg><span><b>Uma dica de ouro</b> no final, pro resultado sair perfeito.</span></li>
+<!-- ===================== POR DENTRO (believability, conciso) ===================== -->
+<section class="sec-paper2">
+  <div class="wrap">
+    <div class="narrow">
+      <span class="qlabel"><svg viewBox="0 0 24 24" fill="none"><path d="M3 7l9-4 9 4-9 4-9-4Z" stroke="#2F7D32" stroke-width="1.9" stroke-linejoin="round"/><path d="M7 9.5V15c0 1.4 2.2 2.5 5 2.5s5-1.1 5-2.5V9.5" stroke="#2F7D32" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>Feito para dar certo</span>
+      <h2 style="font-size:clamp(28px,6vw,44px)">Mesmo que você<br>ache que não sabe cozinhar</h2>
+      <div class="h-band"></div>
+      <p class="lead">Cada receita — do plano e das coleções — é escrita para quem nunca cozinhou conseguir fazer. Sem letra miúda, sem termo difícil. E o <strong>Guia Geral</strong> ensina o que ninguém conta: como comprar mais barato, higienizar, guardar, congelar por até 90 dias e aproveitar as sobras.</p>
+    </div>
+    <div class="teach">
+      <ul>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#2F7D32" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Ingredientes na medida</b><span class="tk">A quantidade exata, para não errar nem desperdiçar.</span></div></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#2F7D32" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Passo a passo numerado</b><span class="tk">Cada etapa em ordem, simples de acompanhar do começo ao fim.</span></div></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#2F7D32" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Tempo, rendimento e modo</b><span class="tk">Tudo logo no topo, antes de você começar.</span></div></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#2F7D32" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Uma dica de ouro</b><span class="tk">O segredinho no fim de cada receita para o resultado sair perfeito.</span></div></li>
       </ul>
-      <h3 style="margin-top:32px">Incluso: o Guia Geral</h3>
-      <div class="guide">
-        <div><b>Higienizar</b>o passo a passo certo para o que vai cru</div>
-        <div><b>Guardar</b>onde cada alimento dura mais</div>
-        <div><b>Congelar</b>porcionar e congelar por até 90 dias</div>
-        <div><b>Reaquecer</b>a temperatura certa, com segurança</div>
-        <div><b>Cozinhar em lote</b>2 sessões rendem vários dias</div>
-        <div><b>Aproveitar sobras</b>a sobra de hoje vira o prato de amanhã</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ACESSO VITALÍCIO ===================== -->
+<section class="dark">
+  <div class="wrap">
+    <div class="narrow center" style="text-align:center;margin-bottom:6px">
+      <span class="eyebrow kick-center" style="color:var(--gold)">Compra única</span>
+    </div>
+    <div class="lifetime">
+      <div class="inf"><svg viewBox="0 0 24 24" fill="none"><path d="M7 8.5c-2.5 0-4 1.6-4 3.5s1.5 3.5 4 3.5c3.5 0 4-7 8-7 2.5 0 4 1.6 4 3.5s-1.5 3.5-4 3.5c-3.5 0-4-7-8-7Z" stroke="#F4A21E" stroke-width="1.9" stroke-linejoin="round"/></svg></div>
+      <div class="lt">
+        <h3>Seu para sempre, sem mensalidade</h3>
+        <p>Você paga <b>uma vez</b> e leva tudo — o plano e as 10 coleções. Sem assinatura, sem cobrança recorrente. Repita o mês que quiser e volte às receitas dos seus momentos preferidos <b>hoje, daqui a seis meses ou no ano que vem</b>.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!--
-  ===== DEPOIMENTOS (ative quando tiver prints reais de clientes) =====
-  Cole 3 a 6 prints/fotos reais com autorização. Nunca use depoimentos inventados.
-<section id="depoimentos">
-  <div class="w">
-    <h2 class="center">Quem já está usando</h2>
-    <div class="steps">
-      <img src="/images/depo-1.webp" width="600" height="800" alt="Depoimento de cliente" loading="lazy">
-      <img src="/images/depo-2.webp" width="600" height="800" alt="Depoimento de cliente" loading="lazy">
-      <img src="/images/depo-3.webp" width="600" height="800" alt="Depoimento de cliente" loading="lazy">
-    </div>
-  </div>
-</section>
--->
+<!-- ===================== OFERTA ===================== -->
+<section class="dark">
+  <div class="wrap narrow center" style="text-align:center">
+    <span class="eyebrow kick-center">Sua nova relação com a cozinha começa aqui</span>
+    <h2 id="oferta" style="scroll-margin-top:76px;font-size:clamp(30px,7vw,50px)">Quanto vale<br>uma mesa feliz?</h2>
+    <div class="h-band" style="margin-left:auto;margin-right:auto"></div>
+    <p class="lead" style="color:#DDD1C0;max-width:640px;margin:0 auto">Nunca mais o peso das seis da tarde. O sorriso na sobremesa. O elogio da visita. O domingo que reúne todo mundo. Coisas assim não têm preço — mas o material que torna tudo possível tem, e é <strong>bem menos do que você imagina</strong>.</p>
 
-<!-- ================= 8. FAZ A CONTA ================= -->
-<section class="conta" id="conta">
-  <div class="w narrow">
-    <span class="kick">"R$129,90 não é caro?"</span>
-    <h2 style="margin-top:14px">Faz a conta comigo.</h2>
-    <div class="vs">
-      <div class="c c1"><small>1 delivery pra família</small><b>≈ R$150</b><p>Acaba na mesma noite. Amanhã, a fome volta.</p></div>
-      <div class="c c2"><small>Rango do Mês</small><b>R$129,90</b><p>O mês inteiro planejado + 440 receitas. Pagamento único, seu pra sempre.</p></div>
+    <div class="receipt">
+      <h3>Tudo o que você leva hoje</h3>
+      <div class="ri"><span>Plano do Mês — 140 receitas + Guia Geral + 4 listas de compras</span><b>R$97</b></div>
+      <div class="ri bo"><span><i class="q">30</i> receitas de Air Fryer</span><b>R$27</b></div>
+      <div class="ri bo"><span><i class="q">30</i> receitas de Forno</span><b>R$27</b></div>
+      <div class="ri bo"><span><i class="q">30</i> receitas de Frigideira</span><b>R$27</b></div>
+      <div class="ri bo"><span><i class="q">30</i> receitas de Saladas</span><b>R$27</b></div>
+      <div class="ri bo"><span><i class="q">30</i> receitas de Lanches</span><b>R$27</b></div>
+      <div class="ri bo"><span><i class="q">30</i> receitas de Molhos</span><b>R$27</b></div>
+      <div class="ri bo"><span><i class="q">30</i> receitas de Churrasco</span><b>R$27</b></div>
+      <div class="ri bo"><span><i class="q">30</i> receitas de Sobremesas</span><b>R$27</b></div>
+      <div class="ri bo"><span><i class="q">30</i> receitas de Sucos</span><b>R$27</b></div>
+      <div class="ri bo"><span><i class="q">30</i> receitas de Drinks</span><b>R$27</b></div>
+      <div class="ri"><span>Suporte, impressão liberada e acesso para sempre</span><b>incluído</b></div>
+      <div class="rt"><span class="lab">Valor real de tudo</span><span class="val">R$367</span></div>
     </div>
-    <p class="punch">Troque um único delivery e ele já se pagou. Dá R$0,30 por receita.</p>
-    <div class="btn-wrap">
-      <a class="btn" href="#comprar"><span class="t">Ver tudo o que eu levo</span><svg width="26" height="26"><use href="#i-arrow"/></svg></a>
-    </div>
-  </div>
-</section>
 
-<!-- ================= 9. OFERTA ================= -->
-<section class="oferta" id="comprar">
-  <div class="w">
-    <div class="offer">
-      <div class="hd"><b>Tudo o que entra no seu acesso</b><span>Liberado na hora, de uma vez só</span></div>
-      <div class="bd">
-        <div class="mock"><img src="/images/membros.webp" width="900" height="900" alt="Área de membros com as 11 coleções" loading="lazy" decoding="async"></div>
-        <div class="vrow"><svg width="22" height="22"><use href="#i-check"/></svg><div class="d"><b>Cardápio do mês inteiro</b>5 refeições por dia, 140 receitas, sem repetir prato</div><span class="v"><s>R$97</s></span></div>
-        <div class="vrow"><svg width="22" height="22"><use href="#i-check"/></svg><div class="d"><b>4 listas de compras prontas</b>quantidade para 1, 2, 3 ou 4 pessoas</div><span class="v inc">incluso</span></div>
-        <div class="vrow"><svg width="22" height="22"><use href="#i-check"/></svg><div class="d"><b>Air Fryer, Forno, Frigideira, Saladas, Lanches</b>150 receitas</div><span class="v"><s>R$135</s></span></div>
-        <div class="vrow"><svg width="22" height="22"><use href="#i-check"/></svg><div class="d"><b>Molhos, Churrasco, Sobremesas, Sucos, Drinks</b>150 receitas</div><span class="v"><s>R$135</s></span></div>
-        <div class="vrow"><svg width="22" height="22"><use href="#i-check"/></svg><div class="d"><b>Guia Geral + suporte + acesso vitalício</b>guardar, congelar, cozinhar em lote, aproveitar sobras</div><span class="v inc">incluso</span></div>
-        <div class="total">
-          <div class="from">Separado sairia por <s>R$367</s>. Hoje:</div>
-          <div class="now">R$129,90</div>
-          <div class="inst">ou 12x de R$13,20 no cartão</div>
-          <div class="per">Só R$0,30 por receita</div>
-        </div>
-        <a class="btn" href="https://pay.hub.la/ZFxwTnNsliEvdmmJow2h"><span class="t">Garantir meu acesso agora<small>Garantia de 7 dias · acesso imediato</small></span><svg width="26" height="26"><use href="#i-arrow"/></svg></a>
-        <div class="secure">
-          <span><svg width="16" height="16"><use href="#i-lock"/></svg>Compra segura</span>
-          <span><svg width="16" height="16"><use href="#i-card"/></svg>Pix ou cartão</span>
-          <span><svg width="16" height="16"><use href="#i-bolt"/></svg>Login no seu e-mail na hora</span>
+    <div class="perbreak">
+      <div class="pb"><div class="v">R$0,29</div><div class="l">por receita</div></div>
+      <div class="pb"><div class="v">440</div><div class="l">receitas no total</div></div>
+      <div class="pb"><div class="v">Pra sempre</div><div class="l">sem mensalidade</div></div>
+    </div>
+
+    <div class="offer-box">
+      <div class="offer-inner">
+        <h3>Plano do Mês + 10 coleções</h3>
+        <div class="value-was">De <s>R$367</s> por apenas</div>
+        <div class="only-today"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" stroke="#241C14" stroke-width="2" stroke-linejoin="round"/></svg>Oferta de lançamento</div>
+        <div class="price-now"><span class="cifra">R$</span>129<span class="cents">,90</span></div>
+        <div class="parc">ou 12x de R$13,20 no cartão</div>
+        <div class="avista">à vista no Pix — pagamento único, sem mensalidade</div>
+        <a href="https://pay.hub.la/ZFxwTnNsliEvdmmJow2h" class="btn btn-wide btn-arrow">Garantir oferta agora</a>
+        <div class="pay-icons">
+          <span><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2" stroke="#6B5A49" stroke-width="1.8"/><path d="M3 10h18" stroke="#6B5A49" stroke-width="1.8"/></svg>Cartão em 12x</span>
+          <span><svg viewBox="0 0 24 24" fill="none"><path d="M12 3 4 7v6c0 4.5 3.4 7.3 8 8 4.6-.7 8-3.5 8-8V7l-8-4Z" stroke="#6B5A49" stroke-width="1.8" stroke-linejoin="round"/></svg>Pix</span>
+          <span><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="3" width="14" height="18" rx="2" stroke="#6B5A49" stroke-width="1.8"/><path d="M10 18h4" stroke="#6B5A49" stroke-width="1.8" stroke-linecap="round"/></svg>Acesso na hora</span>
         </div>
       </div>
     </div>
+    <p class="offer-note">Compra 100% segura • Acesso imediato • Para baixar e imprimir • Suporte incluído • 7 dias de garantia</p>
   </div>
 </section>
 
-<!-- ================= 10. GARANTIA ================= -->
-<section class="garantia" id="garantia" style="padding-top:0">
-  <div class="w narrow">
-    <div class="box">
-      <div class="seal"><b>7</b><span>dias de<br>garantia</span></div>
-      <div>
-        <h2 style="font-size:clamp(28px,6vw,40px)">7 dias pra testar tudo. Sem risco.</h2>
-        <p>Compre, entre na área de membros, baixe tudo e faça as receitas que quiser. Se em até 7 dias achar que não valeu, é só pedir: devolvemos 100% do valor, sem perguntas e sem burocracia.</p>
-        <p><b style="color:var(--ink)">Gostou, fica. Não gostou, não perde nada. O risco é todo nosso.</b></p>
-        <p style="font-size:14px">Direito de arrependimento (art. 49 do CDC). O estorno é feito pela Hubla; no cartão, o prazo para aparecer na fatura depende do seu banco.</p>
+<!-- ===================== GARANTIA ===================== -->
+<section>
+  <div class="wrap">
+    <div class="narrow center" style="text-align:center;margin-bottom:8px">
+      <span class="eyebrow kick-center">O risco é todo nosso</span>
+    </div>
+    <div class="guar">
+      <div class="seal"><div class="big">7</div><div class="sm">dias de<br>garantia</div></div>
+      <div class="guar-tx">
+        <h3>Cozinhe uma memória. Se não for pra você, é de graça.</h3>
+        <p>Entre, veja tudo, faça a primeira receita, sirva pra quem você ama. Você tem <strong>7 dias</strong>. Se achar que não valeu, é só pedir e <strong>devolvemos 100% do seu dinheiro</strong> — sem perguntas, sem complicação. Você só tem a ganhar.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= 11. PRA QUEM ================= -->
-<section id="praquem" style="padding-top:0">
-  <div class="w narrow">
-    <div class="fit">
-      <div class="yes">
-        <h3>É pra você se…</h3>
-        <ul>
-          <li><svg width="22" height="22"><use href="#i-check"/></svg>trava toda tarde sem saber o que fazer de comer</li>
-          <li><svg width="22" height="22"><use href="#i-check"/></svg>gasta demais com delivery e quer voltar a cozinhar</li>
-          <li><svg width="22" height="22"><use href="#i-check"/></svg>enjoou de fazer sempre as mesmas receitas</li>
-          <li><svg width="22" height="22"><use href="#i-check"/></svg>quer economizar no mercado sem comer mal</li>
-        </ul>
-      </div>
-      <div class="no">
-        <h3>Não é pra você se…</h3>
-        <ul>
-          <li><svg width="22" height="22"><use href="#i-x"/></svg>procura dieta restritiva, low carb ou cardápio fitness</li>
-          <li><svg width="22" height="22"><use href="#i-x"/></svg>quer comprar marmita congelada pronta</li>
-          <li><svg width="22" height="22"><use href="#i-x"/></svg>não quer cozinhar de jeito nenhum</li>
-        </ul>
-      </div>
+<!-- ===================== RECAP + CTA ===================== -->
+<section class="sec-paper2">
+  <div class="wrap narrow center" style="text-align:center">
+    <h2 style="font-size:clamp(28px,6vw,44px)">Recapitulando:<br>o que você leva</h2>
+    <div class="h-band" style="margin-left:auto;margin-right:auto"></div>
+    <div class="included" style="text-align:left">
+      <ul class="check">
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>O mês inteiro resolvido</b> — 140 receitas em 4 semanas, Guia Geral e listas de compras</div></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>10 coleções para cada momento</b> — air fryer, forno, frigideira, saladas, lanches, molhos, churrasco, sobremesas, sucos e drinks</div></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>440 receitas no total</b>, para ler, baixar e imprimir à vontade</div></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Suporte na área de membros</b>, <b>acesso para sempre</b> e <b>garantia de 7 dias</b></div></li>
+      </ul>
+    </div>
+    <div style="margin-top:32px;display:flex;flex-direction:column;align-items:center;gap:12px">
+      <a href="#oferta" class="btn btn-wide btn-arrow">Quero garantir o meu acesso</a>
+      <div class="under-cta" style="color:var(--ink-soft)">Acesso imediato • pagamento único • 7 dias de garantia</div>
     </div>
   </div>
 </section>
 
-<!-- ================= 12. FAQ ================= -->
-<section class="faq" id="faq">
-  <div class="w narrow">
-    <h2>Perguntas frequentes</h2>
-    <div class="qa">
-      <details><summary>Como eu recebo depois de pagar?</summary><p>Assim que o pagamento é aprovado, chega no seu e-mail o login e a senha da área de membros (plataforma Hubla). No Pix, a aprovação costuma ser imediata.</p></details>
-      <details><summary>É mensalidade?</summary><p>Não. É pagamento único de R$129,90 (ou 12x de R$13,20). O material fica seu para sempre, sem nenhuma cobrança nova.</p></details>
-      <details><summary>Preciso saber cozinhar?</summary><p>Não. Os ingredientes vêm na medida certa e o passo a passo é numerado. Foi escrito para quem nunca cozinhou conseguir fazer.</p></details>
-      <details><summary>É dieta? A comida é sem graça?</summary><p>Não é dieta. É comida caseira e gostosa: arroz, feijão, frango, carne, massas, legumes e frutas da estação. O objetivo é comer bem gastando pouco.</p></details>
-      <details><summary>Funciona se eu moro sozinho(a)?</summary><p>Sim. As listas de compras trazem a quantidade para 1, 2, 3 ou 4 pessoas. Você escolhe a sua coluna e segue, sem sobra que estraga.</p></details>
-      <details><summary>Dá pra imprimir?</summary><p>Sim. É PDF: você lê no celular, abre no computador, baixa para usar sem internet e imprime à vontade para deixar do lado do fogão.</p></details>
-      <details><summary>Preciso comprar as coleções separadas?</summary><p>Não. As 11 coleções vêm juntas no mesmo acesso, pelo mesmo valor, liberadas de uma vez.</p></details>
-      <details><summary>Tem suporte?</summary><p>Tem. Você conta com suporte dentro da própria área de membros para qualquer dúvida de acesso ou de uso do material.</p></details>
-      <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. Pede o reembolso e devolvemos todo o dinheiro, sem burocracia.</p></details>
+<!-- ===================== FAQ ===================== -->
+<section>
+  <div class="wrap">
+    <div class="narrow center" style="text-align:center">
+      <span class="eyebrow kick-center">Perguntas frequentes</span>
+      <h2 style="font-size:clamp(28px,6vw,44px)">Ainda com dúvida?</h2>
+      <div class="h-band" style="margin-left:auto;margin-right:auto"></div>
+    </div>
+    <div class="faq">
+      <details open><summary>O que exatamente eu recebo?</summary><div class="ans">O Plano do Mês completo (140 receitas em 4 semanas, com Guia Geral e 4 listas de compras) mais 10 coleções com 300 receitas — air fryer, forno, frigideira, saladas, lanches, molhos, churrasco, sobremesas, sucos e drinks. São 440 receitas no total, tudo na mesma área de membros.</div></details>
+      <details><summary>As 10 coleções custam algo a mais?</summary><div class="ans">Não. As 300 receitas das 10 coleções já entram no seu acesso, sem pagar nada além do valor da oferta. É tudo liberado de uma vez.</div></details>
+      <details><summary>Dá para baixar e imprimir as receitas?</summary><div class="ans">Sim, e muita gente adora. Cada material é um PDF: você lê na área de membros, baixa no aparelho para usar sem internet e imprime à vontade para deixar a receita do lado do fogão ou montar sua pasta de receitas.</div></details>
+      <details><summary>Como recebo depois de comprar?</summary><div class="ans">Assim que o pagamento é aprovado, você recebe o acesso à área de membros na plataforma Hubla, com login e senha seus. Entra na hora.</div></details>
+      <details><summary>Tem suporte se eu precisar de ajuda?</summary><div class="ans">Tem. Você conta com suporte dentro da própria área de membros. Se ficar com qualquer dúvida para acessar ou usar o material, é só chamar que a gente te ajuda.</div></details>
+      <details><summary>Isso é marmita congelada?</summary><div class="ans">Não. Você cozinha as bases (arroz, feijão, uma proteína, um molho) e monta o prato fresco na hora, seguindo o cardápio. As mesmas bases viram pratos diferentes a cada dia — por isso não enjoa.</div></details>
+      <details><summary>Preciso saber cozinhar?</summary><div class="ans">Não. O passo a passo é simples e bem explicado, do começo ao fim. Mesmo quem nunca cozinhou consegue seguir. As receitas usam coisas do dia a dia, sem ingrediente difícil.</div></details>
+      <details><summary>Funciona se eu moro sozinho(a)?</summary><div class="ans">Sim. Todas as listas de compras vêm com a quantidade certa para 1, 2, 3 ou 4 pessoas. Você escolhe a sua coluna e segue, sem sobra que estraga. E as coleções são ótimas para se cuidar e se presentear cozinhando pra você.</div></details>
+      <details><summary>Por quanto tempo tenho acesso?</summary><div class="ans">Para sempre. É uma compra única, sem mensalidade. O material fica seu — o plano e as coleções — e você usa quantas vezes quiser.</div></details>
+      <details><summary>E se eu não gostar?</summary><div class="ans">Você tem 7 dias de garantia. Se achar que não é para você, pede o reembolso e devolvemos todo o seu dinheiro. Sem risco nenhum.</div></details>
     </div>
   </div>
 </section>
 
-<!-- ================= 13. FINAL ================= -->
-<section class="final" id="final">
-  <div class="w narrow">
-    <h2>O mês inteiro resolvido. 440 receitas. Um pagamento só.</h2>
-    <p class="lead">Hoje à noite você pode estar abrindo a geladeira sem saber o que fazer, de novo. Ou abrindo o cardápio do dia.</p>
-    <div class="btn-wrap">
-      <a class="btn" href="https://pay.hub.la/ZFxwTnNsliEvdmmJow2h"><span class="t">Quero meu mês resolvido<small>R$129,90 ou 12x de R$13,20</small></span><svg width="26" height="26"><use href="#i-arrow"/></svg></a>
-      <div class="trust">
-        <span><svg width="18" height="18"><use href="#i-shield"/></svg>Garantia de 7 dias</span>
-        <span><svg width="18" height="18"><use href="#i-bolt"/></svg>Acesso imediato</span>
-        <span><svg width="18" height="18"><use href="#i-check"/></svg>Seu pra sempre</span>
-      </div>
+<!-- ===================== CTA FINAL ===================== -->
+<section class="final">
+  <div class="wrap narrow">
+    <figure class="hero-art mock" style="max-width:360px;margin:0 auto 34px"><img loading="lazy" src="images/area-2.webp" alt="O Rango do Mês, com o plano e as 10 coleções"></figure>
+    <h2>A próxima refeição<br>pode mudar <span class="y">tudo.</span></h2>
+    <p class="lead">Ela pode ser só mais uma correria — ou o primeiro capítulo de uma nova relação com a sua cozinha, a sua mesa e as pessoas que você ama. O plano já está pronto. A decisão é sua.</p>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
+      <a href="#oferta" class="btn btn-wide btn-arrow">Quero transformar minha cozinha<span class="sub">Acesso imediato • Garantia de 7 dias</span></a>
+      <div class="under-cta">Pagamento único • para imprimir • com suporte • seu para sempre</div>
     </div>
   </div>
 </section>
 
+<!-- ===================== FOOTER ===================== -->
 <footer>
-  <div class="w">
-    <b>RANGO DO MÊS</b>
-    <p>Dúvidas: <a href="mailto:rangodomes@gmail.com">rangodomes@gmail.com</a></p>
-    <p>© <span id="ano">2026</span> Rango do Mês. Conteúdo educativo de culinária e economia doméstica. Os valores de mercado citados são referências e podem variar por região e época. Resultados dependem da aplicação do conteúdo.</p>
+  <div class="wrap">
+    <div class="brand">Rango do Mês</div>
+    <p>Comer bem gastando pouco.</p>
+    <p style="margin-top:14px">Já é cliente e precisa de ajuda? Você tem suporte dentro da área de membros. Outras dúvidas: <a href="mailto:rangodomes@gmail.com">rangodomes@gmail.com</a></p>
+    <div class="fnote">
+      © <span id="ano"></span> Rango do Mês. Todos os direitos reservados.<br>
+      Conteúdo educativo de culinária e economia doméstica. Os valores de mercado citados são referências e podem variar por região e época. Resultados dependem da aplicação do conteúdo.
+    </div>
   </div>
 </footer>
-
-<div class="sticky" id="sticky" aria-hidden="true">
-  <div class="p"><b>R$129,90</b><span>pagamento único · 7 dias de garantia</span></div>
-  <a class="btn" href="https://pay.hub.la/ZFxwTnNsliEvdmmJow2h" tabindex="-1">Quero agora</a>
-</div>
 
 <script>document.getElementById('ano').textContent=new Date().getFullYear();</script>
 <script>
 (function(){
   try{
-    var CHECKOUT='pay.hub.la';
-    var PROD={content_name:'Rango do Mes - 440 Receitas',currency:'BRL',value:129.90};
-    var enviado={};
-    function px(nome,dados,custom){
-      if(typeof fbq!=='function'||enviado[nome])return;
-      enviado[nome]=1;
-      fbq(custom?'trackCustom':'track',nome,dados||{});
-    }
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    if(!('IntersectionObserver' in window))return;
+    var sel='.step,.mod,.ben,.acc,.cbox,.rt-card,.vs2 .card,.dim-part,.dim-art,.device-shot,.quote,.peek figure,.covers figure,.shot,.dish,.receipt,.perbreak .pb,.lifetime,.urg,.included,.offer-box,.guar,.stat,.teach,.eq .e,.why .w,.moment,.print-hl';
+    var els=[].slice.call(document.querySelectorAll(sel));
+    els.forEach(function(e){e.classList.add('rv');});
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('rv-in');io.unobserve(x.target);}});},{threshold:.1,rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(e){io.observe(e);});
+  }catch(e){}
+})();
+</script>
 
-    // Repassa UTMs/fbclid da URL para o checkout (atribuição das vendas por anúncio)
-    var qs=window.location.search.replace(/^\?/,'');
-    if(qs){
-      document.querySelectorAll('a[href*="'+CHECKOUT+'"]').forEach(function(a){
-        a.href=a.href+(a.href.indexOf('?')>-1?'&':'?')+qs;
+<!-- ===================== PIXEL: EVENTO DE CLIQUE NO BOTÃO DE COMPRA ===================== -->
+<script>
+(function(){
+  try{
+    var botoes = document.querySelectorAll('a[href*="pay.hub.la"]');
+    botoes.forEach(function(b){
+      b.addEventListener('click', function(){
+        if(typeof fbq === 'function'){
+          fbq('track', 'InitiateCheckout', {
+            content_name: 'Rango do Mes - Plano + 10 Colecoes',
+            currency: 'BRL',
+            value: 129.90
+          });
+        }
       });
-    }
-
-    // Eventos de rolagem
-    if('IntersectionObserver' in window){
-      var marcos=[
-        {el:document.getElementById('dor'),fn:function(){px('PassouDoHero',{},true);}},
-        {el:document.getElementById('colecoes'),fn:function(){px('ViuColecoes',{},true);}},
-        {el:document.getElementById('comprar'),fn:function(){px('ViewContent',PROD);}}
-      ];
-      var obs=new IntersectionObserver(function(ents){
-        ents.forEach(function(e){
-          if(!e.isIntersecting)return;
-          obs.unobserve(e.target);
-          marcos.forEach(function(m){if(m.el===e.target)m.fn();});
-        });
-      },{threshold:0,rootMargin:'0px 0px -12% 0px'});
-      marcos.forEach(function(m){if(m.el)obs.observe(m.el);});
-
-      // Barra fixa no celular: aparece depois do topo, some na oferta e no final
-      var sticky=document.getElementById('sticky');
-      var hide={topo:true,comprar:false,final:false};
-      function upd(){
-        var on=!hide.topo&&!hide.comprar&&!hide['final'];
-        sticky.classList.toggle('on',on);
-        sticky.setAttribute('aria-hidden',on?'false':'true');
-        sticky.querySelector('a').tabIndex=on?0:-1;
-      }
-      var sObs=new IntersectionObserver(function(ents){
-        ents.forEach(function(e){hide[e.target.id]=e.isIntersecting;});
-        upd();
-      },{threshold:0});
-      ['topo','comprar','final'].forEach(function(id){var el=document.getElementById(id);if(el)sObs.observe(el);});
-    }
-
-    document.querySelectorAll('a[href="#comprar"]').forEach(function(b){
-      b.addEventListener('click',function(){px('AddToCart',PROD);});
-    });
-    document.querySelectorAll('a[href*="'+CHECKOUT+'"]').forEach(function(b){
-      b.addEventListener('click',function(){px('InitiateCheckout',PROD);});
-    });
-    document.querySelectorAll('.qa details').forEach(function(d){
-      d.addEventListener('toggle',function(){if(d.open)px('AbriuFAQ',{},true);});
     });
   }catch(e){}
 })();
 </script>
+
 </body>
 </html>
